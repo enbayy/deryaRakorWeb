@@ -1,12 +1,12 @@
-import urun1 from "src/assets/urun1.png"
-import urun2 from "src/assets/urun2.png"
-import urun3 from "src/assets/urun3.png"
-import urun4 from "src/assets/urun4.png"
-import urun5 from "src/assets/urun5.png"
-import urun6 from "src/assets/urun6.png"
-import urun7 from "src/assets/urun7.png"
-import urun8 from "src/assets/urun8.png"
-import urun9 from "src/assets/urun9.png"
+import urun1 from "../assets/urun1.png"
+import urun2 from "../assets/urun2.png"
+import urun3 from "../assets/urun3.png"
+import urun4 from "../assets/urun4.png"
+import urun5 from "../assets/urun5.png"
+import urun6 from "../assets/urun6.png"
+import urun7 from "../assets/urun7.png"
+import urun8 from "../assets/urun8.png"
+import urun9 from "../assets/urun9.png"
 
 const productsData = [
     { id: 1, image: { urun1 }, title: "Soketler", description: "Ferrules" },
