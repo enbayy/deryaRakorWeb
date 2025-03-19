@@ -9,7 +9,6 @@ import { RiWhatsappFill } from "react-icons/ri";
 const Hero = lazy(() => import("./pages/Hero"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
-const CtaPage = lazy(() => import("./pages/CtaPage"));
 const ProductPage = lazy(() => import("./pages/Products/ProductsPage"));
 const AllProducts = lazy(() => import("./pages/Products/AllProductsPage"));
 
