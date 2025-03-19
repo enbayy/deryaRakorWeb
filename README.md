@@ -1,1 +1,1 @@
-https://deryarakor.netlify.app/
+
