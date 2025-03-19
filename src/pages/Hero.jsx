@@ -1,0 +1,109 @@
+import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import bgVideo from "../assets/bg.mp4";
+
+const Hero = () => {
+  const navigate = useNavigate();
+  const sliderRef = useRef(null);
+  const [selectedMedia, setSelectedMedia] = useState({ src: bgVideo, type: "video" });
+
+  const media = [
+    { src: bgVideo, label: "Video", type: "video" },
+    { src: "", label: "Resim 1", type: "image" },
+    { src: "", label: "Resim 2", type: "image" },
+    { src: "", label: "Resim 3", type: "image" },
+    { src: "", label: "Resim 4", type: "image" },
+    { src: "", label: "Resim 5", type: "image" },
+    { src: "", label: "Resim 6", type: "image" },
+  ];
+
+  return (
+    <section className="bg-white w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-8 space-y-10 md:space-y-0">
+      <div className="w-full md:w-1/2 flex flex-col justify-center space-y-6 text-center md:text-left">
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide text-[#D22128] leading-tight">
+          Derya Rakor
+        </h1>
+        <p className="text-lg md:text-2xl text-gray-700 leading-relaxed">
+          <span className="font-semibold text-[#D22128]">Derya Rakor</span>,
+          <span className="font-semibold"> Hidrolik Hortum Rakor imalatı</span> ve
+          <span className="font-semibold"> Hidrolik Hortum bağlantı elemanları montajlanması</span>
+          alanlarında en güvenilir çözümleri sunmaktadır.
+        </p>
+      </div>
+
+      <div className="w-full md:w-1/2 flex flex-col items-center space-y-6">
+        <div className="w-full max-w-2xl h-64 md:h-96 lg:h-[28rem] flex items-center justify-center relative">
+          {selectedMedia.type === "video" ? (
+            <video key={selectedMedia.src} autoPlay loop muted className="w-full h-full object-cover rounded-lg shadow-xl border-4 border-[#D22128]">
+              <source src={selectedMedia.src} type="video/mp4" />
+            </video>
+          ) : (
+            <img src={selectedMedia.src} alt={selectedMedia.label} className="w-full h-full object-cover rounded-lg shadow-xl border-4 border-[#D22128]" />
+          )}
+        </div>
+
+        <div className="w-full max-w-2xl relative">
+          <Slider
+            ref={sliderRef}
+            dots={false}
+            infinite={true}
+            speed={500}
+            slidesToShow={3}
+            slidesToScroll={3}
+            autoplay={false}
+            arrows={false}
+            className="w-full"
+          >
+            {media.map((item, index) => (
+              <div key={index} className="p-2 cursor-pointer" onClick={() => setSelectedMedia(item)}>
+                <div className="w-full h-20 md:h-24 flex items-center justify-center text-white font-bold rounded-md shadow-md transition-all duration-300 bg-[#D22128] hover:bg-[#A91B22] relative">
+                  {item.type === "video" ? (
+                    <video autoPlay loop muted className="w-full h-full object-cover rounded-md">
+                      <source src={item.src} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <img src={item.src} alt={item.label} className="w-full h-full object-cover rounded-md" />
+                  )}
+                </div>
+              </div>
+            ))}
+          </Slider>
+
+          <div className="hidden lg:flex absolute top-1/2 left-[-3rem] transform -translate-y-1/2">
+            <button
+              onClick={() => sliderRef.current.slickPrev()}
+              className="bg-[#D22128] text-white p-3 rounded-full shadow-md hover:bg-[#A91B22] transition">
+              ◀
+            </button>
+          </div>
+          <div className="hidden lg:flex absolute top-1/2 right-[-3rem] transform -translate-y-1/2">
+            <button
+              onClick={() => sliderRef.current.slickNext()}
+              className="bg-[#D22128] text-white p-3 rounded-full shadow-md hover:bg-[#A91B22] transition">
+              ▶
+            </button>
+          </div>
+
+          <div className="flex lg:hidden justify-center items-center gap-4 mt-4">
+            <button
+              onClick={() => sliderRef.current.slickPrev()}
+              className="bg-[#D22128] text-white p-3 rounded-full shadow-md hover:bg-[#A91B22] transition">
+              ◀
+            </button>
+            <button
+              onClick={() => sliderRef.current.slickNext()}
+              className="bg-[#D22128] text-white p-3 rounded-full shadow-md hover:bg-[#A91B22] transition">
+              ▶
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
