@@ -59,6 +59,7 @@ const Hero = () => {
               autoPlay
               loop
               muted
+              playsInline
               onLoadedData={() => setIsLoading(false)}
               className="w-full h-full object-cover rounded-lg shadow-xl border-4 border-[#D22128]"
             >
