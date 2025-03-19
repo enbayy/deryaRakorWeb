@@ -7,9 +7,9 @@ import logo from "../../assets/derya.png";
 
 export const MenuLinks = [
   { id: 1, name: "ANASAYFA", link: "/" },
-  { id: 3, name: "ÜRÜNLER", link: "/urunlerimiz" },
-  { id: 5, name: "HAKKIMIZDA", link: "/hakkimizda" },
-  { id: 5, name: "İLETİŞİM", link: "/iletisim" },
+  { id: 2, name: "ÜRÜNLER", link: "/urunlerimiz" },
+  { id: 3, name: "HAKKIMIZDA", link: "/hakkimizda" },
+  { id: 4, name: "İLETİŞİM", link: "/iletisim" },
 ];
 
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="relative bg-white dark:bg-[#0F172A] text-[#1E293B] dark:text-white z-50">
+    <header className="relative bg-white dark:bg-black text-black dark:text-white z-50">
       <div className="container flex justify-between items-center py-5">
         <Link to="/">
           <img src={logo} alt="Engin Tasarım Logo" className="h-12" />

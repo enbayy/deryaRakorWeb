@@ -63,7 +63,7 @@ const App = () => {
     }, []);
 
     return (
-        <div className="bg-[#F8FAFC] dark:bg-[#0F172A] dark:text-white text-black overflow-x-hidden">
+        <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
             <ScrollToTop />
             <Navbar />
 

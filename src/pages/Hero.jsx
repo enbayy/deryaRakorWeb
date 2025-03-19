@@ -1,19 +1,19 @@
 import React, { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import bgVideo from "../assets/bg.mp4";
+import slider from "../assets/slider.jpg";
+import slider2 from "../assets/slider2.jpg";
 
 const Hero = () => {
-  const navigate = useNavigate();
   const sliderRef = useRef(null);
   const [selectedMedia, setSelectedMedia] = useState({ src: bgVideo, type: "video" });
 
   const media = [
     { src: bgVideo, label: "Video", type: "video" },
-    { src: "", label: "Resim 1", type: "image" },
-    { src: "", label: "Resim 2", type: "image" },
+    { src: slider, label: "Resim 1", type: "image" },
+    { src: slider2, label: "Resim 2", type: "image" },
     { src: "", label: "Resim 3", type: "image" },
     { src: "", label: "Resim 4", type: "image" },
     { src: "", label: "Resim 5", type: "image" },
@@ -21,16 +21,23 @@ const Hero = () => {
   ];
 
   return (
-    <section className="bg-white w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-8 space-y-10 md:space-y-0">
-      <div className="w-full md:w-1/2 flex flex-col justify-center space-y-6 text-center md:text-left">
+    <section className="bg-white dark:bg-black w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-4 space-y-10 md:space-y-0 container mt-[-40px]">
+      <div className="w-full md:w-1/2 flex flex-col justify-center space-y-6 p-6 bg-white dark:bg-black rounded-lg">
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide text-[#D22128] leading-tight">
           Derya Rakor
         </h1>
-        <p className="text-lg md:text-2xl text-gray-700 leading-relaxed">
+        <p className="text-lg md:text-2xl text-black leading-relaxed">
           <span className="font-semibold text-[#D22128]">Derya Rakor</span>,
-          <span className="font-semibold"> Hidrolik Hortum Rakor imalatı</span> ve
-          <span className="font-semibold"> Hidrolik Hortum bağlantı elemanları montajlanması</span>
-          alanlarında en güvenilir çözümleri sunmaktadır.
+          <span className="font-semibold dark:text-white"> Hidrolik Hortum Rakor imalatı</span>
+          {" "}<span className="dark:text-white">ve</span>
+          <span className="font-semibold dark:text-white"> Hidrolik Hortum bağlantı elemanları montajlanması</span>
+          {" "} <span className="dark:text-white">alanlarında en güvenilir çözümleri sunmaktadır.</span>
+        </p>
+        <p className="text-lg md:text-2xl text-black dark:text-white leading-relaxed">
+          Rakor imalatçıları olarak,
+          <span className="font-semibold text-[#D22128]"> hidrolik basınçlı sıvı iletim sistemlerine</span>{" "}
+          en kısa ve en etkili çözümleri sağlıyoruz. Tarım makineleri, hidrolik kaldırma üniteleri ve
+          düşük-yüksek basınçlı yağ iletim sistemlerinde güvenle kullanabilirsiniz.
         </p>
       </div>
 

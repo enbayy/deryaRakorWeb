@@ -5,7 +5,7 @@ import BrandLinks from '../BrandLinks';
 const Footer = () => {
     return (
         <footer className="bg-white dark:bg-[#0F172A] py-16">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 justify-center items-start">
                     <div className="flex flex-col items-center md:items-start">
                         <h2 className="text-3xl font-bold text-black dark:text-white font-inter">
