@@ -13,7 +13,7 @@ const ProductPage = () => {
     };
 
     return (
-        <section className="bg-white dark:bg-[#0F172A] text-[#1E293B] dark:text-white py-12">
+        <section className="bg-white dark:bg-black text-[#1E293B] dark:text-white py-12">
             <div className="container mx-auto">
                 <div className="mb-8 text-center space-y-3">
                     <div className="flex justify-between">

@@ -4,7 +4,7 @@ import { useAnimate } from "framer-motion";
 
 const BrandLinks = () => {
     return (
-        <div className="bg-white dark:bg-[#0F172A] px-4 py-12">
+        <div className="bg-white dark:bg-black px-4 py-12">
             <div className="mx-auto max-w-7xl">
                 <ClipPathLinks />
             </div>
