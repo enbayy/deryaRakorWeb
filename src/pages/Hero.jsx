@@ -23,23 +23,28 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-white dark:bg-black w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-4 space-y-10 md:space-y-0 container">
-      <div className="w-full md:w-1/2 flex flex-col justify-center space-y-6 p-6 bg-white dark:bg-black rounded-lg">
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide text-[#D22128] leading-tight">
+    <section className="bg-white dark:bg-black w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-10 space-y-12 md:space-y-0 container">
+      <div className="w-full md:w-1/2 flex flex-col justify-center space-y-8 p-8 bg-white dark:bg-black rounded-lg shadow-lg">
+        <h1 className="text-6xl md:text-8xl font-extrabold tracking-wide text-[#D22128] leading-tight drop-shadow-lg">
           Derya Rakor
         </h1>
-        <p className="text-lg md:text-2xl text-black leading-relaxed">
+        <p className="text-xl md:text-2xl text-black dark:text-white leading-relaxed">
           <span className="font-semibold text-[#D22128]">Derya Rakor</span>,
           <span className="font-semibold dark:text-white"> Hidrolik Hortum Rakor imalatı</span>
           {" "}<span className="dark:text-white">ve</span>
           <span className="font-semibold dark:text-white"> Hidrolik Hortum bağlantı elemanları montajlanması</span>
           {" "} <span className="dark:text-white">alanlarında en güvenilir çözümleri sunmaktadır.</span>
         </p>
-        <p className="text-lg md:text-2xl text-black dark:text-white leading-relaxed">
+        <p className="text-xl md:text-2xl text-black dark:text-white leading-relaxed">
           Rakor imalatçıları olarak,
           <span className="font-semibold text-[#D22128]"> hidrolik basınçlı sıvı iletim sistemlerine</span>{" "}
           en kısa ve en etkili çözümleri sağlıyoruz. Tarım makineleri, hidrolik kaldırma üniteleri ve
           düşük-yüksek basınçlı yağ iletim sistemlerinde güvenle kullanabilirsiniz.
+        </p>
+        <p className="text-xl md:text-2xl text-black dark:text-white leading-relaxed">
+          Sektördeki tecrübemiz ve kaliteye verdiğimiz önem sayesinde, müşteri memnuniyetini
+          en üst seviyede tutarak hizmet sunuyoruz. En dayanıklı ve uzun ömürlü hidrolik çözümleri
+          için bizimle iletişime geçebilirsiniz.
         </p>
       </div>
 
