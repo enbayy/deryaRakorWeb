@@ -23,21 +23,32 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-white dark:bg-black w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-4 space-y-10 md:space-y-0 container mt-[-40px]">
+    <section className="bg-white dark:bg-black w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-4 space-y-10 md:space-y-0 container">
       <div className="w-full md:w-1/2 flex flex-col justify-center space-y-6 p-6 bg-white dark:bg-black rounded-lg">
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide text-[#D22128] leading-tight">
           Derya Rakor
         </h1>
+        <p className="text-lg md:text-2xl text-black leading-relaxed">
+          <span className="font-semibold text-[#D22128]">Derya Rakor</span>,
+          <span className="font-semibold dark:text-white"> Hidrolik Hortum Rakor imalatı</span>
+          {" "}<span className="dark:text-white">ve</span>
+          <span className="font-semibold dark:text-white"> Hidrolik Hortum bağlantı elemanları montajlanması</span>
+          {" "} <span className="dark:text-white">alanlarında en güvenilir çözümleri sunmaktadır.</span>
+        </p>
         <p className="text-lg md:text-2xl text-black dark:text-white leading-relaxed">
-          Hidrolik hortum rakor imalatı ve bağlantı elemanları montajlanması konusunda uzmanız.
+          Rakor imalatçıları olarak,
+          <span className="font-semibold text-[#D22128]"> hidrolik basınçlı sıvı iletim sistemlerine</span>{" "}
+          en kısa ve en etkili çözümleri sağlıyoruz. Tarım makineleri, hidrolik kaldırma üniteleri ve
+          düşük-yüksek basınçlı yağ iletim sistemlerinde güvenle kullanabilirsiniz.
         </p>
       </div>
 
       <div className="w-full md:w-1/2 flex flex-col items-center space-y-6">
         <div className="w-full max-w-2xl h-64 md:h-96 lg:h-[28rem] flex items-center justify-center relative">
           {isLoading && (
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
-              <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold">
+              <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin mb-2"></div>
+              Yükleniyor...
             </div>
           )}
 
@@ -85,7 +96,6 @@ const Hero = () => {
                     <img
                       src={item.src}
                       alt={item.label}
-                      onLoad={() => setIsLoading(false)}
                       className="w-full h-full object-cover rounded-md"
                     />
                   )}
