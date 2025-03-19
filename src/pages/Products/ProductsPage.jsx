@@ -19,12 +19,14 @@ const ProductPage = () => {
                     <div className="flex justify-between">
                         <h1
                             data-aos="fade-right"
+                            data-aos-once="true"
                             className="text-[#D22128] dark:text-[#E9C46A] border-l-8 border-[#D22128] dark:border-[#E9C46A] py-2 pl-2 flex relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words"
                         >
                             ÜRÜNLERİMİZ
                         </h1>
                         <button
                             data-aos="fade-left"
+                            data-aos-once="true"
                             onClick={handleClick}
                             className="w-[120px] h-[40px] bg-[#D22128] dark:bg-[#E9C46A] text-white rounded-xl hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] transition mt-4"
                         >
