@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { RiWhatsappFill } from "react-icons/ri";
 import HeroSlider from "./components/HeroSlider";
+import CTASection from "./pages/CtaPage";
 
 const Hero = lazy(() => import("./pages/Hero"));
 const About = lazy(() => import("./pages/About"));
@@ -83,6 +84,7 @@ const App = () => {
                                 <Hero />
                                 <HeroSlider />
                                 <ProductPage />
+                                <CTASection />
                             </>
                         }
                     />
