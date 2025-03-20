@@ -85,8 +85,8 @@ const AllProductsPage = () => {
                             </Fade>
                         ))
                     ) : (
-                        <p className="text-center col-span-full text-lg text-gray-500 dark:text-gray-400">
-                            Aramanıza uygun ürün bulunamadı.
+                        <p className="text-center col-span-full text-lg text-gray-500 dark:text-gray-400 font-sans">
+                            Sonuç bulunamadı.
                         </p>
                     )}
                 </div>
