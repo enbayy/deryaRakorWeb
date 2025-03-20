@@ -105,7 +105,7 @@ const Hero = () => {
                 onClick={togglePlay}
                 className="absolute bottom-4 left-4 bg-[#D22128] text-white p-4 rounded-full shadow-md hover:bg-[#A91B22] transition"
               >
-                {isPlaying ? <FaPause size={24} /> : <FaPlay size={24} />}
+                {isPlaying ? <FaPause size={10} /> : <FaPlay size={10} />}
               </button>
             </div>
           ) : (

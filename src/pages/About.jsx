@@ -27,48 +27,63 @@ const About = () => {
         slidesToScroll: 3,
         autoplay: true,
         autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                },
+            },
+        ],
     };
 
     return (
-        <section
-            id="about-detail"
-            className="bg-white dark:bg-black text-[#1E293B] dark:text-white py-16"
-        >
+        <section id="about-detail" className="bg-white dark:bg-black text-[#1E293B] dark:text-white py-16">
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="text-center mb-16" data-aos="fade-up">
-                    <h1 className="text-5xl font-bold text-[#D22128] font-sans">
-                        Hakkımızda
-                    </h1>
+                    <h1 className="text-5xl font-bold text-[#D22128] font-sans">Hakkımızda</h1>
                     <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto font-poppins">
                         Firmamız Derya Rakor, Hidrolik Hortum Rakoru imalatı ve Hidrolik Hortumların bağlantı elemanlarına montajlanması ana faaliyet alanlarımızdır.
                     </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-                    <div className="space-y-6" data-aos="fade-right">
-                        <h2 className="text-3xl font-bold text-[#D22128] font-sans">
-                            Kaliteli Üretim ve Güvenilir Hizmet
-                        </h2>
+                    <div data-aos="fade-right">
+                        <img src={slider2} alt="Kaliteli Üretim" className="rounded-xl shadow-lg w-full" />
+                    </div>
+                    <div className="space-y-6" data-aos="fade-left">
+                        <h2 className="text-3xl font-bold text-[#D22128] font-sans">Kaliteli Üretim ve Güvenilir Hizmet</h2>
                         <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-poppins">
                             Üretim sürecimizde en yüksek kalite standartlarını sağlamak için en son teknolojiyi kullanıyoruz. Güvenilir ve dayanıklı hidrolik hortum rakorları ile müşterilerimize en iyi hizmeti sunuyoruz.
                         </p>
                     </div>
-                    <div data-aos="fade-left">
-                        <img src={slider2} alt="Kaliteli Üretim" className="rounded-xl shadow-lg w-full" />
-                    </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-12 items-center flex-col-reverse md:flex-row mb-16">
-                    <div data-aos="fade-right">
-                        <img src={slider} alt="Hidrolik Sistem" className="rounded-xl shadow-lg w-full" />
-                    </div>
-                    <div className="space-y-6" data-aos="fade-left">
-                        <h2 className="text-3xl font-bold text-[#D22128] font-sans">
-                            Hidrolik Sistemlerde Çözüm Ortağınız
-                        </h2>
+                <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div className="space-y-6" data-aos="fade-right">
+                        <h2 className="text-3xl font-bold text-[#D22128] font-sans">Hidrolik Sistemlerde Çözüm Ortağınız</h2>
                         <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-poppins">
                             Hidrolik sistemlerde uzmanlaşmış ekibimizle, müşterilerimizin ihtiyaçlarına özel çözümler üretiyoruz. Dayanıklı ve uzun ömürlü ürünlerimizle sektörde güvenilir bir partneriz.
                         </p>
+                    </div>
+                    <div data-aos="fade-left">
+                        <img src={slider} alt="Hidrolik Sistem" className="rounded-xl shadow-lg w-full" />
                     </div>
                 </div>
 
