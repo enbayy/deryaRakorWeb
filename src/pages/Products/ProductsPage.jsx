@@ -42,7 +42,7 @@ const ProductPage = () => {
                                 direction="up"
                                 cascade
                                 damping={0.15}
-                                delay={index * 450}
+                                delay={index * 200}
                                 triggerOnce
                             >
                                 <ProductCard product={product} />

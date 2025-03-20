@@ -48,15 +48,13 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-white w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-10 space-y-12 md:space-y-0 container relative overflow-hidden">
+    <section className="bg-white w-full flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-10 space-y-12 md:space-y-0 container relative overflow-hidden -mt-6">
       <div className="w-full md:w-1/2 flex flex-col justify-center space-y-8 p-8 bg-opacity-90 bg-white dark:bg-black rounded-lg lg:mb-16 relative z-10">
         <h1 className="text-6xl md:text-8xl font-extrabold tracking-wide text-[#D22128] leading-tight drop-shadow-lg relative">
           Derya Rakor
           <span className="absolute -top-4 -right-6 text-3xl animate-spin">🔩</span>
         </h1>
-
         <div className="h-1 w-28 bg-[#D22128] rounded-full"></div>
-
         <p className="text-xl md:text-2xl text-black leading-relaxed">
           <span className="font-semibold text-[#D22128]">Derya Rakor</span>,
           <span className="font-semibold"> Hidrolik Hortum Rakor imalatı</span> ve
