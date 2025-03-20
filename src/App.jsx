@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { RiWhatsappFill } from "react-icons/ri";
+import HeroSlider from "./components/HeroSlider";
 
 const Hero = lazy(() => import("./pages/Hero"));
 const About = lazy(() => import("./pages/About"));
@@ -80,6 +81,7 @@ const App = () => {
                         element={
                             <>
                                 <Hero />
+                                <HeroSlider />
                                 <ProductPage />
                             </>
                         }

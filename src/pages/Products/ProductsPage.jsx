@@ -28,7 +28,7 @@ const ProductPage = () => {
                             data-aos="fade-left"
                             data-aos-once="true"
                             onClick={handleClick}
-                            className="bg-[#D22128] dark:hover:bg-red-400 text-white rounded-xl hover:bg-black transition mt-4 px-5 py-2 font-sans"
+                            className="bg-[#D22128] dark:hover:bg-red-400 text-white rounded-xl hover:bg-black transition mt-4 px-5 py-2 font-sans font-semibold"
                         >
                             Hepsini Gör
                         </button>
