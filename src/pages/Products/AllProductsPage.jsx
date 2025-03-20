@@ -33,6 +33,17 @@ const AllProductsPage = () => {
     return (
         <section className="bg-white dark:bg-black text-black dark:text-white py-16">
             <div className="container mx-auto">
+                <div className="flex justify-between items-center mb-8 px-4">
+                    <h2 className="text-2xl font-semibold font-sans">Ürün Kataloğu</h2>
+                    <a
+                        href="/katalog.pdf"
+                        download
+                        className="px-5 py-2 text-lg rounded-lg transition-all shadow-sm bg-[#D22128] text-white hover:bg-black dark:hover:bg-red-400 font-sans"
+                    >
+                        Kataloğu İndir
+                    </a>
+                </div>
+
                 <div className="flex flex-wrap justify-center gap-3 mb-8">
                     {categories.map((category) => (
                         <button

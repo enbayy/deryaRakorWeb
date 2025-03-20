@@ -40,7 +40,7 @@ const Navbar = () => {
                     before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] 
                     before:bg-[#D22128] dark:before:bg-[#D22128] before:scale-x-0 before:origin-right 
                     before:transition before:duration-300 before:ease-in-out 
-                    hover:before:scale-x-100 hover:before:origin-left font-sans border-b
+                    hover:before:scale-x-100 hover:before:origin-left font-sans
                   `}
                 >
                   {name}

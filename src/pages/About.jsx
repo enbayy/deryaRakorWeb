@@ -39,8 +39,8 @@ const About = () => {
         <section id="about-detail" className="bg-white dark:bg-black text-black dark:text-white py-16">
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="text-center mb-16" data-aos="fade-up">
-                    <h1 className="text-5xl font-extrabold text-[#D22128] font-sans">Hakkımızda</h1>
-                    <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto font-poppins">
+                    <h1 className="text-5xl font-bold text-[#D22128] font-sans">Hakkımızda</h1>
+                    <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-5xl mx-auto font-poppins">
                         Firmamız Derya Rakor, hidrolik hortum rakoru imalatı ve hidrolik hortum montajı alanlarında
                         uzmanlaşmıştır. Kaliteli üretim anlayışımız ve müşteri memnuniyeti odaklı yaklaşımımızla sektörde
                         güvenilir bir çözüm ortağıyız.

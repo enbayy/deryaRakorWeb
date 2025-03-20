@@ -74,7 +74,7 @@ const LinkBox = ({ Icon, href }) => {
             <a href={href} target="_blank" rel="noopener noreferrer">
                 <Icon className="text-xl sm:text-3xl lg:text-4xl" />
             </a>
-            <div ref={scope} style={{ clipPath: BOTTOM_RIGHT_CLIP }} className="absolute inset-0 grid place-content-center bg-[#D22128] dark:bg-white text-white dark:text-[#1E293B]">
+            <div ref={scope} style={{ clipPath: BOTTOM_RIGHT_CLIP }} className="absolute inset-0 grid place-content-center bg-black dark:bg-white text-white dark:text-black">
                 <Icon className="text-xl sm:text-3xl md:text-4xl " />
             </div>
         </div>
