@@ -3,16 +3,52 @@ import ProductCard from "./ProductCard";
 import productsData from "../../data/ProductData";
 import { Fade } from "react-awesome-reveal";
 
+const extraCategories = ["Soket", "Somun", "Rakor"];
+
+const categories = [
+    "Tümü",
+    ...new Set(
+        productsData
+            .map((product) => product.category)
+            .filter((category) => category && category.trim() !== "")
+    ),
+    ...extraCategories,
+];
+
 const AllProductsPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState("Tümü");
 
-    const filteredProducts = productsData.filter((product) =>
-        product.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const filteredProducts = productsData.filter((product) => {
+        const matchesCategory =
+            selectedCategory === "Tümü" ||
+            product.category === selectedCategory ||
+            (extraCategories.includes(selectedCategory) &&
+                product.title.toLowerCase().includes(selectedCategory.toLowerCase()));
+
+        const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
+        return matchesCategory && matchesSearch;
+    });
 
     return (
         <section className="bg-white dark:bg-black text-black dark:text-white py-16">
             <div className="container mx-auto">
+                <div className="flex flex-wrap justify-center gap-3 mb-8">
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            onClick={() => setSelectedCategory(category)}
+                            className={`px-5 py-2 text-lg rounded-lg border-2 transition-all shadow-sm 
+                            ${selectedCategory === category
+                                    ? "bg-[#D22128] text-white border-[#D22128]"
+                                    : "bg-gray-50 dark:bg-black border-gray-300 dark:border-gray-600 text-black dark:text-white"
+                                } hover:bg-[#D22128] hover:text-white`}
+                        >
+                            {category}
+                        </button>
+                    ))}
+                </div>
+
                 <div className="mb-8 w-full flex justify-center">
                     <input
                         type="text"

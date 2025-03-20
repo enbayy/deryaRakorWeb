@@ -11,14 +11,14 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
     >
       <div>
         <div className="flex justify-between items-center">
-          <h2 className="text-2xl font-semibold">Menü</h2>
+          <h2 className="text-2xl font-semibold font-sans">Menü</h2>
           <HiX size={30} className="cursor-pointer" onClick={toggleMenu} />
         </div>
         <nav className="mt-12">
           <ul className="space-y-4 text-xl">
             {MenuLinks.map(({ id, name, link }) => (
               <li key={id}>
-                <a href={link} className="mb-5 inline-block" onClick={toggleMenu}>
+                <a href={link} className="mb-5 inline-block font-sans font-semibold" onClick={toggleMenu}>
                   {name}
                 </a>
               </li>
@@ -28,12 +28,12 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
       </div>
       <div className="pb-6 flex justify-center gap-4">
         <button
-          className="text-white bg-[#D22128] dark:bg-[#D22128] hover:bg-[#B81C22] dark:hover:bg-[#B81C22] transition-all duration-300 px-5 py-2 text-lg font-semibold font-poppins rounded-xl"
+          className="text-white bg-[#D22128] hover:bg-red-400 transition-all duration-300 px-5 py-2 text-lg font-semibold font-sans rounded-xl"
         >
           TR
         </button>
         <button
-          className="text-white bg-[#D22128] dark:bg-[#D22128] hover:bg-[#B81C22] dark:hover:bg-[#B81C22] transition-all duration-300 px-5 py-2 text-lg font-semibold font-poppins rounded-xl"
+          className="text-white bg-[#D22128] hover:bg-red-400 transition-all duration-300 px-5 py-2 text-lg font-semibold font-poppins rounded-xl"
         >
           EN
         </button>
