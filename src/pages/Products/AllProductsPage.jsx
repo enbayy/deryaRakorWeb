@@ -11,9 +11,8 @@ const AllProductsPage = () => {
     );
 
     return (
-        <section className="min-h-screen bg-white dark:bg-black text-[#1E293B] dark:text-white py-16 px-6 md:px-12 flex flex-col items-center">
-            <div className="max-w-7xl w-full">
-
+        <section className="bg-white dark:bg-black text-black dark:text-white py-16">
+            <div className="container mx-auto">
                 <div className="mb-8 w-full flex justify-center">
                     <input
                         type="text"
@@ -24,7 +23,7 @@ const AllProductsPage = () => {
                     />
                 </div>
 
-                <div data-aos="fade-up" data-aos-once="true" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     {filteredProducts.length > 0 ? (
                         filteredProducts.map((product, index) => (
                             <Fade
