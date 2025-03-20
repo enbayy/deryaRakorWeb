@@ -7,6 +7,7 @@ import videoThumbnail from "../assets/slider.png";
 import slider from "../assets/slider.jpg";
 import slider2 from "../assets/slider2.jpg";
 import { FaPlay, FaPause } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const sliderRef = useRef(null);
@@ -14,6 +15,15 @@ const Hero = () => {
   const [selectedMedia, setSelectedMedia] = useState({ src: bgVideo, type: "video" });
   const [isLoading, setIsLoading] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/urunlerimiz")
+  }
+
+  const handleClick2 = () => {
+    navigate("/iletisim")
+  }
 
   const media = [
     { src: bgVideo, label: "Video", type: "video", thumbnail: videoThumbnail },
@@ -73,10 +83,14 @@ const Hero = () => {
         </ul>
 
         <div className="flex space-x-4 mt-6">
-          <button className="bg-[#D22128] hover:bg-black dark:hover:bg-red-400 text-white px-6 py-3 rounded-xl transition-all transform font-sans">
+          <button
+            onClick={handleClick}
+            className="bg-[#D22128] hover:bg-black dark:hover:bg-red-400 text-white px-6 py-3 rounded-xl transition-all transform font-sans">
             Ürünleri İncele
           </button>
-          <button className="bg-[#D22128] hover:bg-black dark:hover:bg-red-400 text-white px-6 py-3 rounded-xl transition-all transform font-sans">
+          <button
+            onClick={handleClick2}
+            className="bg-[#D22128] hover:bg-black dark:hover:bg-red-400 text-white px-6 py-3 rounded-xl transition-all transform font-sans">
             Bize Ulaşın
           </button>
         </div>

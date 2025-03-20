@@ -14,14 +14,9 @@ export const MenuLinks = [
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
-  };
-
-  const handleClick = () => {
-    navigate("/iletisim");
   };
 
   return (
@@ -55,13 +50,11 @@ const Navbar = () => {
         </nav>
         <div className="flex items-center gap-4">
           <button
-            onClick={handleClick}
             className="hidden lg:block text-white bg-[#D22128] hover:bg-black dark:hover:bg-red-400 transition-all duration-300 px-5 py-2 text-lg font-semibold rounded-xl font-sans"
           >
             TR
           </button>
           <button
-            onClick={handleClick}
             className="hidden lg:block text-white bg-[#D22128] hover:bg-black dark:hover:bg-red-400 transition-all duration-300 px-5 py-2 text-lg font-semibold font-sans rounded-xl"
           >
             EN
