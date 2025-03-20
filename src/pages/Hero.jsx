@@ -8,6 +8,7 @@ import slider from "../assets/slider.jpg";
 import slider2 from "../assets/slider2.jpg";
 import { FaPlay, FaPause } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { MdCheckCircle } from "react-icons/md";
 
 const Hero = () => {
   const sliderRef = useRef(null);
@@ -77,9 +78,15 @@ const Hero = () => {
         </p>
 
         <ul className="text-lg md:text-xl text-black dark:text-white space-y-2 font-poppins">
-          <li>✅ Kaliteli ve Dayanıklı Ürünler</li>
-          <li>✅ Hidrolik Sistemlerde Uzmanlık</li>
-          <li>✅ 10+ Yıllık Deneyim</li>
+          <li className="flex items-center">
+            <MdCheckCircle className="text-[#D22128] mr-2" size={24} /> Kaliteli ve Dayanıklı Ürünler
+          </li>
+          <li className="flex items-center">
+            <MdCheckCircle className="text-[#D22128] mr-2" size={24} /> Hidrolik Sistemlerde Uzmanlık
+          </li>
+          <li className="flex items-center">
+            <MdCheckCircle className="text-[#D22128] mr-2" size={24} /> 10+ Yıllık Deneyim
+          </li>
         </ul>
 
         <div className="flex space-x-4 mt-6">
