@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 
 const ProductPage = () => {
-    const productsToDisplay = productsData.slice(0, 9);
+    const productsToDisplay = productsData.slice(0, 8);
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -13,7 +13,7 @@ const ProductPage = () => {
     };
 
     return (
-        <section className="bg-white dark:bg-black text-[#1E293B] dark:text-white py-12">
+        <section className="bg-white dark:bg-black text-[#1E293B] dark:text-white py-16">
             <div className="container mx-auto">
                 <div className="mb-8 text-center space-y-3">
                     <div className="flex justify-between">
@@ -28,21 +28,21 @@ const ProductPage = () => {
                             data-aos="fade-left"
                             data-aos-once="true"
                             onClick={handleClick}
-                            className="w-[120px] h-[40px] bg-[#D22128] dark:bg-[#E9C46A] text-white rounded-xl hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] transition mt-4"
+                            className="w-[120px] h-[40px] bg-[#D22128] dark:bg-[#E9C46A] text-white rounded-xl hover:bg-black dark:hover:bg-[#BF3A26] transition mt-4"
                         >
                             HEPSİNİ GÖR
                         </button>
                     </div>
                 </div>
                 <div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                         {productsToDisplay.map((product, index) => (
                             <Fade
                                 key={product.id}
                                 direction="up"
                                 cascade
                                 damping={0.15}
-                                delay={index * 200}
+                                delay={index * 150}
                                 triggerOnce
                             >
                                 <ProductCard product={product} />

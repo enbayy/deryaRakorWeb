@@ -6,6 +6,7 @@ import bgVideo from "../assets/bg.mp4";
 import videoThumbnail from "../assets/slider.png";
 import slider from "../assets/slider.jpg";
 import slider2 from "../assets/slider2.jpg";
+import { FaPlay, FaPause } from "react-icons/fa";
 
 const Hero = () => {
   const sliderRef = useRef(null);
@@ -48,13 +49,16 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-white w-full flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-10 space-y-12 md:space-y-0 container relative overflow-hidden -mt-6">
-      <div className="w-full md:w-1/2 flex flex-col justify-center space-y-8 p-8 bg-opacity-90 bg-white dark:bg-black rounded-lg lg:mb-16 relative z-10">
-        <h1 className="text-6xl md:text-8xl font-extrabold tracking-wide text-[#D22128] leading-tight drop-shadow-lg relative">
-          Derya Rakor
-          <span className="absolute -top-4 -right-6 text-3xl animate-spin">🔩</span>
-        </h1>
-        <div className="h-1 w-28 bg-[#D22128] rounded-full"></div>
+    <section className="bg-white w-full h-full flex flex-col md:flex-row items-center justify-center container py-16 space-y-12 md:space-y-0 relative overflow-hidden">
+      <div className="w-full md:w-1/2 flex flex-col justify-center space-y-7 py-8 bg-opacity-90 bg-white dark:bg-black rounded-lg lg:mb-16 relative z-10">
+        <div className="group relative inline-block">
+          <h1 className="text-6xl md:text-8xl font-extrabold tracking-wide text-[#D22128] leading-tight drop-shadow-lg relative">
+            Derya Rakor
+            <span className="absolute text-3xl animate-spin">🔩</span>
+          </h1>
+          <div className="h-1 w-28 bg-[#D22128] rounded-full transition-all duration-300 group-hover:w-[150px] md:group-hover:w-[300px] lg:group-hover:w-[600px] mt-2"></div>
+        </div>
+
         <p className="text-xl md:text-2xl text-black leading-relaxed">
           <span className="font-semibold text-[#D22128]">Derya Rakor</span>,
           <span className="font-semibold"> Hidrolik Hortum Rakor imalatı</span> ve
@@ -101,7 +105,7 @@ const Hero = () => {
                 onClick={togglePlay}
                 className="absolute bottom-4 left-4 bg-[#D22128] text-white p-4 rounded-full shadow-md hover:bg-[#A91B22] transition"
               >
-                {isPlaying ? "⏸" : "▶"}
+                {isPlaying ? <FaPause size={24} /> : <FaPlay size={24} />}
               </button>
             </div>
           ) : (
