@@ -13,14 +13,14 @@ const ProductPage = () => {
     };
 
     return (
-        <section className="bg-white dark:bg-black text-[#1E293B] dark:text-white py-16">
+        <section className="bg-white dark:bg-black text-black dark:text-white py-16">
             <div className="container mx-auto">
                 <div className="mb-8 text-center space-y-3">
                     <div className="flex justify-between">
                         <h1
                             data-aos="fade-right"
                             data-aos-once="true"
-                            className="text-[#D22128] dark:text-[#E9C46A] border-l-8 border-[#D22128] dark:border-[#E9C46A] py-2 pl-2 flex relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words"
+                            className="text-[#D22128] border-l-8 border-[#D22128] py-2 pl-2 flex relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words font-sans"
                         >
                             ÜRÜNLERİMİZ
                         </h1>
@@ -28,9 +28,9 @@ const ProductPage = () => {
                             data-aos="fade-left"
                             data-aos-once="true"
                             onClick={handleClick}
-                            className="w-[120px] h-[40px] bg-[#D22128] dark:bg-[#E9C46A] text-white rounded-xl hover:bg-black dark:hover:bg-[#BF3A26] transition mt-4"
+                            className="bg-[#D22128] dark:hover:bg-red-400 text-white rounded-xl hover:bg-black transition mt-4 px-5 py-2 font-sans"
                         >
-                            HEPSİNİ GÖR
+                            Hepsini Gör
                         </button>
                     </div>
                 </div>

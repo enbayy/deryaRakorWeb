@@ -49,40 +49,40 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-white w-full h-full flex flex-col md:flex-row items-center justify-center container py-16 space-y-12 md:space-y-0 relative overflow-hidden">
-      <div className="w-full md:w-1/2 flex flex-col justify-center space-y-7 py-8 bg-opacity-90 bg-white dark:bg-black rounded-lg lg:mb-16 relative z-10">
+    <section className="bg-white dark:bg-black w-full h-full flex flex-col md:flex-row items-center justify-center container py-6 space-y-12 md:space-y-0 relative overflow-hidden">
+      <div data-aos="fade-right" className="w-full md:w-1/2 flex flex-col justify-center space-y-7 py-8 bg-opacity-90 bg-white dark:bg-black rounded-lg lg:mb-16 relative">
         <div className="group relative inline-block">
-          <h1 className="text-6xl md:text-8xl font-extrabold tracking-wide text-[#D22128] leading-tight drop-shadow-lg relative">
+          <h1 className="text-6xl md:text-8xl font-bold tracking-wide text-[#D22128] leading-tight drop-shadow-lg relative font-sans">
             Derya Rakor
             <span className="absolute text-3xl animate-spin">🔩</span>
           </h1>
           <div className="h-1 w-28 bg-[#D22128] rounded-full transition-all duration-300 group-hover:w-[150px] md:group-hover:w-[300px] lg:group-hover:w-[600px] mt-2"></div>
         </div>
 
-        <p className="text-xl md:text-2xl text-black leading-relaxed">
+        <p className="text-xl md:text-2xl text-black dark:text-white leading-relaxed font-sans">
           <span className="font-semibold text-[#D22128]">Derya Rakor</span>,
           <span className="font-semibold"> Hidrolik Hortum Rakor imalatı</span> ve
           <span className="font-semibold"> Hidrolik Hortum bağlantı elemanları montajlanması</span>
           {" "} alanlarında <span className="text-[#D22128] font-semibold">en güvenilir</span> çözümleri sunmaktadır.
         </p>
 
-        <ul className="text-lg md:text-xl text-black space-y-2">
+        <ul className="text-lg md:text-xl text-black dark:text-white space-y-2 font-poppins">
           <li>✅ Kaliteli ve Dayanıklı Ürünler</li>
           <li>✅ Hidrolik Sistemlerde Uzmanlık</li>
           <li>✅ 10+ Yıllık Deneyim</li>
         </ul>
 
         <div className="flex space-x-4 mt-6">
-          <button className="bg-[#D22128] hover:bg-[#A91B22] text-white px-6 py-3 rounded-lg shadow-lg transition-all transform hover:scale-110">
+          <button className="bg-[#D22128] hover:bg-black dark:hover:bg-red-400 text-white px-6 py-3 rounded-xl transition-all transform font-sans">
             Ürünleri İncele
           </button>
-          <button className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg shadow-lg transition-all transform hover:scale-110">
+          <button className="bg-[#D22128] hover:bg-black dark:hover:bg-red-400 text-white px-6 py-3 rounded-xl transition-all transform font-sans">
             Bize Ulaşın
           </button>
         </div>
       </div>
 
-      <div className="w-full md:w-1/2 flex flex-col items-center space-y-6 relative z-10">
+      <div data-aos="fade-left" className="w-full md:w-1/2 flex flex-col items-center space-y-6 relative">
         <div className="w-full max-w-2xl h-64 md:h-96 lg:h-[28rem] flex items-center justify-center relative border-4 border-[#D22128] rounded-xl shadow-lg overflow-hidden">
           {isLoading && (
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white text-lg font-semibold">

@@ -11,8 +11,8 @@ const ProductCard = ({ product }) => {
                 />
             </div>
             <div className="flex flex-col justify-between">
-                <h3 className="mt-4 text-lg font-semibold">{product.title}</h3>
-                <h3 className="mt-4 text-lg font-semibold">{product.description}</h3>
+                <h3 className="mt-4 text-lg font-semibold font-sans">{product.title}</h3>
+                <h3 className="mt-4 text-lg font-semibold font-sans">{product.description}</h3>
             </div>
         </div>
     );
