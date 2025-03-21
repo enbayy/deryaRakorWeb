@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../assets/deryaRakor.mp4";
+import video from "../assets/DeryaRakor.mp4";
 import slider1 from "../assets/slider4.png";
 import slider2 from "../assets/slider2.png";
 import slider3 from "../assets/slider3.png";
