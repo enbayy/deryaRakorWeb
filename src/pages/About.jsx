@@ -1,127 +1,48 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import slider1 from "../assets/slider.png";
-import slider2 from "../assets/slider.jpg";
+import React from "react";
+import video from "../assets/deryaRakor.mp4";
+import slider1 from "../assets/slider4.png";
+import slider2 from "../assets/slider2.png";
+import slider3 from "../assets/slider3.png";
+import slider4 from "../assets/slider5.png";
+import slider5 from "../assets/slider6.png";
 
-const About = () => {
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
-    }, []);
-
-    const handleClick = () => {
-        navigate("/iletisim");
-    };
-
-    const sliderSettings = {
-        dots: true,
-        infinite: true,
-        speed: 600,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: { slidesToShow: 1, slidesToScroll: 1 },
-            },
-        ],
-    };
-
+const AboutPage = () => {
     return (
-        <section id="about-detail" className="bg-white dark:bg-black text-black dark:text-white py-16">
-            <div className="container mx-auto px-6 lg:px-12">
-                <div className="text-center mb-16" data-aos="fade-up">
-                    <h1 className="text-5xl font-bold text-[#D22128] font-sans">Hakkımızda</h1>
-                    <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-5xl mx-auto font-poppins">
-                        Firmamız Derya Rakor, hidrolik hortum rakoru imalatı ve hidrolik hortum montajı alanlarında
-                        uzmanlaşmıştır. Kaliteli üretim anlayışımız ve müşteri memnuniyeti odaklı yaklaşımımızla sektörde
-                        güvenilir bir çözüm ortağıyız.
-                    </p>
-                </div>
+        <div className="container w-full min-h-screen flex flex-col items-center px-4 md:px-12 lg:px-20">
+            <h1 className="text-4xl font-bold text-center mt-8 mb-6">Hakkımızda</h1>
 
-                <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-                    <div data-aos="fade-right">
-                        <img src={slider2} alt="Kaliteli Üretim" className="rounded-xl shadow-lg w-full" />
-                    </div>
-                    <div className="space-y-6" data-aos="fade-left">
-                        <h2 className="text-3xl font-bold text-[#D22128] font-sans">Kaliteli Üretim & Güvenilir Hizmet</h2>
-                        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-poppins">
-                            En son teknolojiyi kullanarak, yüksek kalite standartlarında hidrolik hortum rakorları üretiyoruz.
-                            Dayanıklı ve uzun ömürlü ürünlerimizle müşteri memnuniyetini en üst seviyeye çıkarıyoruz.
-                        </p>
-                    </div>
-                </div>
+            <p className="text-lg text-gray-700 text-center max-w-4xl leading-relaxed">
+                Derya Hidrolik, 30 yılı aşkın sektörel bilgi birikimi ve tecrübesiyle hidrolik
+                silindirler, bağlantı elemanları, rakorlar ve borular üretmektedir. Yeni üretim
+                tesisimizde, 5000 m2 alan üzerinde 4000 m2 kapalı üretim sahamız ve 40 kişilik
+                uzman ekibimizle faaliyet göstermekteyiz.
+            </p>
+            <p className="text-lg text-gray-700 text-center max-w-4xl leading-relaxed mt-4">
+                Ürünlerimizi <strong>Derya Rakor</strong> markasıyla Avrupa'nın birçok ülkesine ihraç ediyor,
+                yüksek kalite standartlarımızla sektörde fark yaratıyoruz. Gelecek hedefimiz,
+                yeni teknolojik yatırımlarla katma değeri yüksek ürünler geliştirerek global pazardaki
+                konumumuzu daha da güçlendirmektir.
+            </p>
 
-                <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-                    <div className="space-y-6" data-aos="fade-right">
-                        <h2 className="text-3xl font-bold text-[#D22128] font-sans">Hidrolik Sistemlerde Çözüm Ortağınız</h2>
-                        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-poppins">
-                            Hidrolik sektöründeki uzman ekibimizle, müşterilerimizin ihtiyaçlarına özel çözümler sunuyoruz.
-                            Güçlü mühendislik altyapımız ile inovatif ve güvenilir ürünler geliştiriyoruz.
-                        </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 my-10 max-w-6xl w-full">
+                {[slider1, slider2, slider3, slider4, slider5].map((image, index) => (
+                    <div key={index} className="relative group overflow-hidden rounded-lg shadow-lg border border-gray-300">
+                        <img
+                            src={image}
+                            alt={`Galeri ${index + 1}`}
+                            className="w-full h-[250px] md:h-[300px] object-cover rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-105"
+                        />
                     </div>
-                    <div data-aos="fade-left">
-                        <img src={slider1} alt="Hidrolik Sistem" className="rounded-xl shadow-lg w-full" />
-                    </div>
-                </div>
-
-                <div className="w-full mb-16" data-aos="zoom-in">
-                    <Slider {...sliderSettings}>
-                        <div className="px-2">
-                            <div className="relative">
-                                <img src={slider1} alt="Üretim Alanı" className="rounded-xl w-full h-64 object-cover" />
-                                <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white p-2 rounded-lg">
-                                    <h3 className="text-lg font-semibold">Üretim Alanı</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="px-2">
-                            <div className="relative">
-                                <img src={slider2} alt="Hidrolik Hortum" className="rounded-xl w-full h-64 object-cover" />
-                                <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white p-2 rounded-lg">
-                                    <h3 className="text-lg font-semibold">Hidrolik Hortum</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="px-2">
-                            <div className="relative">
-                                <img src={slider1} alt="Montaj Süreci" className="rounded-xl w-full h-64 object-cover" />
-                                <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white p-2 rounded-lg">
-                                    <h3 className="text-lg font-semibold">Montaj Süreci</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="px-2">
-                            <div className="relative">
-                                <img src={slider2} alt="Son Kontroller" className="rounded-xl w-full h-64 object-cover" />
-                                <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white p-2 rounded-lg">
-                                    <h3 className="text-lg font-semibold">Son Kontroller</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </Slider>
-                </div>
-
-                <div className="text-center">
-                    <button
-                        onClick={handleClick}
-                        className="bg-[#D22128] hover:bg-red-500 text-white px-6 py-3 rounded-xl text-lg font-semibold transition-all duration-500 shadow-md hover:scale-105"
-                        data-aos="fade-up"
-                    >
-                        İletişime Geç
-                    </button>
-                </div>
+                ))}
             </div>
-        </section>
+
+            <div className="w-full max-w-6xl mt-10">
+                <video className="w-full h-auto rounded-lg shadow-lg object-cover" style={{ aspectRatio: "16/9" }} controls>
+                    <source src={video} type="video/mp4" />a
+                </video>
+            </div>
+        </div>
     );
 };
 
-export default About;
+export default AboutPage;

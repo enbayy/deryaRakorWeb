@@ -8,6 +8,8 @@ import { RiWhatsappFill } from "react-icons/ri";
 import HeroSlider from "./components/HeroSlider";
 import CTASection from "./pages/CtaPage";
 import References from "./pages/References";
+import Breadcrumb from "./components/Breadcrumb";
+import KategoriDetay from "./pages/CategoryDetail";
 
 const Hero = lazy(() => import("./pages/Hero"));
 const About = lazy(() => import("./pages/About"));
@@ -68,7 +70,7 @@ const App = () => {
         <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
             <ScrollToTop />
             <Navbar />
-
+            <Breadcrumb />
             <div className="fixed top-0 left-0 right-0 h-1 bg-white dark:bg-black z-30">
                 <div
                     className="h-full bg-[#D22128]"
@@ -101,6 +103,7 @@ const App = () => {
                     <Route path="/hakkimizda" element={<About />} />
                     <Route path="/iletisim" element={<Contact />} />
                     <Route path="/urunler" element={<ProductPage />} />
+                    <Route path="/urunlerimiz/:title" element={<KategoriDetay />} />
                     <Route path="/urunlerimiz" element={<AllProducts />} />
                 </Routes>
             </Suspense>

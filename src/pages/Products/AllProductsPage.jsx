@@ -1,98 +1,92 @@
 import React, { useState } from "react";
-import ProductCard from "./ProductCard";
-import productsData from "../../data/ProductData";
-import { Fade } from "react-awesome-reveal";
-
-const extraCategories = ["Soket", "Somun", "Rakor"];
+import { Link } from "react-router-dom";
+import video from "../../assets/DeryaRakor.mp4";
+import foto1 from "../../assets/hidrolikLiftParca.png";
+import foto2 from "../../assets/hidrolikSilindir.png";
+import foto3 from "../../assets/hidrolikDevreBoruları.png";
+import foto4 from "../../assets/hortumBasliklari.png";
+import slider1 from "../../assets/slider1.png";
+import slider2 from "../../assets/slider2.png";
+import slider3 from "../../assets/slider3.png";
+import slider4 from "../../assets/slider4.png";
+import slider5 from "../../assets/slider5.png";
+import slider6 from "../../assets/slider6.png";
 
 const categories = [
-    "Tümü",
-    ...new Set(
-        productsData
-            .map((product) => product.category)
-            .filter((category) => category && category.trim() !== "")
-    ),
-    ...extraCategories,
+    { id: 1, title: "HİDROLİK LİFT PARÇALARI", image: foto1, description: "Hidrolik lift sistemlerine özel parçalar." },
+    { id: 2, title: "HİDROLİK SİLİNDİRLER", image: foto2, description: "Endüstriyel hidrolik silindir modelleri." },
+    { id: 3, title: "HİDROLİK DEVRE BORULARI", image: foto3, description: "Hidrolik devrelerde kullanılan borular." },
+    { id: 4, title: "HİDROLİK-PNÖMATİK HORTUM VE BAŞLIKLARI", image: foto4, description: "Hidrolik ve pnömatik hortum başlıkları." },
 ];
 
-const AllProductsPage = () => {
-    const [searchTerm, setSearchTerm] = useState("");
-    const [selectedCategory, setSelectedCategory] = useState("Tümü");
+const galleryImages = [slider1, slider2, slider3, slider4, slider5, slider6];
 
-    const filteredProducts = productsData.filter((product) => {
-        const matchesCategory =
-            selectedCategory === "Tümü" ||
-            product.category === selectedCategory ||
-            (extraCategories.includes(selectedCategory) &&
-                product.title.toLowerCase().includes(selectedCategory.toLowerCase()));
-
-        const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesCategory && matchesSearch;
-    });
+const UretimPage = () => {
+    const [videoLoaded, setVideoLoaded] = useState(false);
+    const [imageLoaded, setImageLoaded] = useState({});
 
     return (
-        <section className="bg-white dark:bg-black text-black dark:text-white py-16">
-            <div className="container mx-auto">
-                <div className="flex justify-between items-center mb-8 px-4">
-                    <h2 className="text-2xl font-semibold font-sans">Ürün Kataloğu</h2>
-                    <a
-                        href="/katalog.pdf"
-                        download
-                        className="px-5 py-2 text-lg rounded-lg transition-all shadow-sm bg-[#D22128] text-white hover:bg-black dark:hover:bg-red-400 font-sans"
-                    >
-                        Kataloğu İndir
-                    </a>
-                </div>
+        <div className="w-full min-h-screen bg-white flex flex-col items-center">
+            <div className="w-full flex justify-center items-center relative">
+                {!videoLoaded && (
+                    <div className="absolute inset-0 flex justify-center items-center bg-gray-200">
+                        <p className="text-gray-700 font-semibold text-lg">Video yükleniyor...</p>
+                    </div>
+                )}
+                <video
+                    className={`w-full h-auto max-h-[885px] md:max-h-[650px] sm:max-h-[400px] aspect-video object-cover sm:object-contain ${videoLoaded ? "block" : "hidden"}`}
+                    src={video}
+                    autoPlay
+                    loop
+                    muted
+                    onLoadedData={() => setVideoLoaded(true)}
+                ></video>
+            </div>
 
-                <div className="flex flex-wrap justify-center gap-3 mb-8">
-                    {categories.map((category) => (
-                        <button
-                            key={category}
-                            onClick={() => setSelectedCategory(category)}
-                            className={`px-5 py-2 text-lg rounded-lg border-2 transition-all shadow-sm 
-                            ${selectedCategory === category
-                                    ? "bg-[#D22128] text-white border-[#D22128]"
-                                    : "bg-gray-50 dark:bg-black border-gray-300 dark:border-gray-600 text-black dark:text-white"
-                                } hover:bg-[#D22128] hover:text-white`}
-                        >
-                            {category}
-                        </button>
+            <div className="max-w-6xl w-full px-4 py-10">
+                <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 uppercase">Üretimden Görseller</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    {galleryImages.map((image, index) => (
+                        <div key={index} className="relative group overflow-hidden rounded-lg shadow-lg border border-gray-300">
+                            {!imageLoaded[index] && (
+                                <div className="absolute inset-0 flex justify-center items-center bg-gray-200">
+                                    <p className="text-gray-700 font-semibold text-sm">Görsel yükleniyor...</p>
+                                </div>
+                            )}
+                            <img
+                                src={image}
+                                alt={`Üretim ${index + 1}`}
+                                className={`w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105 ${imageLoaded[index] ? "block" : "hidden"}`}
+                                onLoad={() => setImageLoaded((prev) => ({ ...prev, [index]: true }))}
+                            />
+                        </div>
                     ))}
                 </div>
+            </div>
 
-                <div className="mb-8 w-full flex justify-center">
-                    <input
-                        type="text"
-                        placeholder="Ürün Ara..."
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full max-w-lg px-5 py-3 border-2 border-[#D22128] rounded-lg focus:outline-none focus:ring-4 focus:ring-[#D22128] transition-all text-lg shadow-sm bg-gray-50 dark:bg-black"
-                    />
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                    {filteredProducts.length > 0 ? (
-                        filteredProducts.map((product, index) => (
-                            <Fade
-                                key={product.id}
-                                direction="up"
-                                cascade
-                                damping={0.15}
-                                delay={index * 150}
-                                triggerOnce
-                            >
-                                <ProductCard product={product} />
-                            </Fade>
-                        ))
-                    ) : (
-                        <p className="text-center col-span-full text-lg text-gray-500 dark:text-gray-400 font-sans">
-                            Sonuç bulunamadı.
-                        </p>
-                    )}
+            <div className="max-w-6xl w-full px-4 py-10">
+                <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 uppercase">Ürün Kategorileri</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {categories.map((category) => (
+                        <Link
+                            key={category.id}
+                            to={`/urunlerimiz/${encodeURIComponent(category.title.toLowerCase().replace(/\s+/g, "-"))}`}
+                            className="flex flex-col items-center bg-white shadow-xl rounded-xl p-6 border-2 border-gray-300 transition-transform transform hover:scale-105 hover:shadow-2xl h-[320px]"
+                        >
+                            <div className="w-full flex-grow flex justify-center items-center">
+                                <img
+                                    src={category.image}
+                                    alt={category.title}
+                                    className="w-full h-full object-contain rounded-md"
+                                />
+                            </div>
+                            <h3 className="mt-auto text-xl font-bold text-center text-gray-900 uppercase">{category.title}</h3>
+                        </Link>
+                    ))}
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 
-export default AllProductsPage;
+export default UretimPage;
