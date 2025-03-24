@@ -7,6 +7,7 @@ export default {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        stainy: ['Stainy', 'cursive'],
       },
       colors: {
         primary: "#FF7F00",

@@ -5,11 +5,11 @@ import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { RiWhatsappFill } from "react-icons/ri";
-import HeroSlider from "./components/HeroSlider";
-import CTASection from "./pages/CtaPage";
-import References from "./pages/References";
 import Breadcrumb from "./components/Breadcrumb";
 import KategoriDetay from "./pages/CategoryDetail";
+import AboutSection from "./pages/AboutSection";
+import WhyChooseUs from "./pages/WhoChooseUs";
+import ContactHome from "./pages/ContactHome";
 
 const Hero = lazy(() => import("./pages/Hero"));
 const About = lazy(() => import("./pages/About"));
@@ -85,10 +85,10 @@ const App = () => {
                         element={
                             <>
                                 <Hero />
-                                <References />
-                                <HeroSlider />
+                                <AboutSection />
                                 <ProductPage />
-                                <CTASection />
+                                <WhyChooseUs />
+                                <ContactHome />
                             </>
                         }
                     />

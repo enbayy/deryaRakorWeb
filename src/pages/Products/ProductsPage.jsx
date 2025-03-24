@@ -1,58 +1,42 @@
 import React from "react";
-import ProductCard from "./ProductCard";
-import productsData from "../../data/ProductData";
-import { useNavigate } from "react-router-dom";
-import { Fade } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
+import foto1 from "../../assets/hidrolikLiftParca.png";
+import foto2 from "../../assets/hidrolikSilindir.png";
+import foto3 from "../../assets/hidrolikDevreBoruları.png";
+import foto4 from "../../assets/hortumBasliklari.png";
 
-const ProductPage = () => {
-    const productsToDisplay = productsData.slice(0, 8);
-    const navigate = useNavigate();
+const categories = [
+    { id: 1, title: "HİDROLİK LİFT PARÇALARI", image: foto1 },
+    { id: 2, title: "HİDROLİK SİLİNDİRLER", image: foto2 },
+    { id: 3, title: "HİDROLİK DEVRE BORULARI", image: foto3 },
+    { id: 4, title: "HİDROLİK-PNÖMATİK HORTUM VE BAŞLIKLARI", image: foto4 },
+];
 
-    const handleClick = () => {
-        navigate("urunlerimiz");
-    };
-
+const ProductsPage = () => {
     return (
-        <section className="bg-white dark:bg-black text-black dark:text-white py-16">
-            <div className="container mx-auto">
-                <div className="mb-8 text-center space-y-3">
-                    <div className="flex justify-between">
-                        <h1
-                            data-aos="fade-right"
-                            data-aos-once="true"
-                            className="text-[#D22128] border-l-8 border-[#D22128] py-2 pl-2 flex relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words font-sans"
+        <div className="container w-full bg-white flex flex-col items-center">
+            <div className=" w-full px-4 py-12">
+                <h2 className="text-4xl font-semibold text-center mb-10 text-gray-800 font-sans tracking-wide">
+                   ÜRÜN KATEGORİLERİ
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    {categories.map((category) => (
+                        <Link
+                            key={category.id}
+                            to={`/urunlerimiz/${encodeURIComponent(category.title.toLowerCase().replace(/\s+/g, "-"))}`}
+                            className="flex flex-col items-center bg-white shadow-xl rounded-2xl p-6 border border-gray-300 transition-transform transform hover:scale-105 hover:shadow-2xl"
                         >
-                            ÜRÜNLERİMİZ
-                        </h1>
-                        <button
-                            data-aos="fade-left"
-                            data-aos-once="true"
-                            onClick={handleClick}
-                            className="bg-[#D22128] dark:hover:bg-red-400 text-white rounded-xl hover:bg-black transition mt-4 px-5 py-2 font-sans font-semibold"
-                        >
-                            Hepsini Gör
-                        </button>
-                    </div>
-                </div>
-                <div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                        {productsToDisplay.map((product, index) => (
-                            <Fade
-                                key={product.id}
-                                direction="up"
-                                cascade
-                                damping={0.15}
-                                delay={index * 150}
-                                triggerOnce
-                            >
-                                <ProductCard product={product} />
-                            </Fade>
-                        ))}
-                    </div>
+                            <div className="w-full h-56 flex justify-center items-center overflow-hidden rounded-lg">
+                                <img src={category.image} alt={category.title} className="w-full h-full object-contain" />
+                            </div>
+                            <h3 className="mt-6 text-xl font-bold text-center text-gray-900 uppercase">{category.title}</h3>
+                        </Link>
+                    ))}
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 
-export default ProductPage;
+export default ProductsPage;

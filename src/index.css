@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Stainy';
+  src: url('assets/fonts/Stainy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: 'Lato', sans-serif;
 }
@@ -30,11 +37,11 @@ html {
   }
 
   .button-outline {
-    @apply rounded-md border-2 border-primary hover:bg-primary/80 hover:text-black duration-500 py-2 px-6 text-primary tracking-wider;
+    @apply rounded-md border-2 border-[#D22128] hover:bg-[#D22128]/80 hover:text-black duration-500 py-2 px-6 text-[#D22128] tracking-wider;
   }
 
   .primary-btn {
-    @apply bg-primary text-white hover:bg-primary/80 duration-500 rounded-lg py-2 px-4;
+    @apply bg-[#D22128] text-white hover:bg-[#D22128]/80 duration-500 rounded-lg py-2 px-4;
   }
 }
 
@@ -58,4 +65,12 @@ html {
 .slick-next::before {
   color: inherit !important;
   font-size: 30px;
+}
+
+.custom-dots {
+  position: static !important;
+  display: flex !important;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
 }

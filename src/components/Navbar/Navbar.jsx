@@ -7,7 +7,7 @@ import logo from "../../assets/deryaLogo.png";
 
 export const MenuLinks = [
   { id: 1, name: "ANASAYFA", link: "/" },
-  { id: 2, name: "ÜRÜNLER", link: "/urunlerimiz" },
+  { id: 2, name: "ÜRETİM", link: "/urunlerimiz" },
   { id: 3, name: "HAKKIMIZDA", link: "/hakkimizda" },
   { id: 4, name: "İLETİŞİM", link: "/iletisim" },
 ];
