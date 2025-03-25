@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import logo from "../assets/deryaLogo.png";
 
 const WhyChooseUs = () => {
   const stats = [
@@ -43,8 +44,8 @@ const WhyChooseUs = () => {
 
   return (
     <section ref={sectionRef} className="container bg-white dark:bg-black py-12 px-6 md:px-16 lg:px-24">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-5xl font-semibold text-[#D22128] mb-6 font-sans">Neden Derya Rakor?</h2>
+      <div className="flex flex-col justify-center items-center max-w-6xl mx-auto text-center">
+        <img src={logo} alt="Derya Rakor Logo" className="w-60 h-auto" />
         <p className="text-black dark:text-white text-lg leading-relaxed font-poppins">
           30 yılı aşkın tecrübemiz, yüksek kalite standartlarımız ve müşteri
           memnuniyetine verdiğimiz önemle sektörde fark yaratıyoruz.

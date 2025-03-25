@@ -1,6 +1,7 @@
 import React from "react";
 import aboutImage from "../assets/slider13.png";
 import { useNavigate } from "react-router-dom";
+import logo from "../assets/deryaLogo.png";
 
 const AboutSection = () => {
   const navigate = useNavigate();
@@ -9,9 +10,7 @@ const AboutSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
         <div>
           <div className="space-y-6 sm:p-16 pb-6 text-left">
-            <h2 data-aos="fade-up" className="text-3xl font-sans font-bold text-black dark:text-white">
-              Derya Hidrolik
-            </h2>
+            <img src={logo} alt="Derya Rakor Logo" className="w-60 h-auto" />
             <p data-aos="fade-up" className="text-lg leading-8 tracking-wide text-black dark:text-white font-poppins">
               30 yıllık deneyimimizle sektörde kaliteyi temsil ediyoruz. Güçlü altyapımız ve yenilikçi çözümlerimizle iş ortaklarımıza değer katıyoruz.
             </p>

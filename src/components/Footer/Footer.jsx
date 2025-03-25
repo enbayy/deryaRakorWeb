@@ -1,5 +1,6 @@
 import React from "react";
 import { SiFacebook, SiLinkedin, SiInstagram, SiTwitter } from "react-icons/si";
+import logo from "../../assets/deryaLogo.png";
 
 const Footer = () => {
     return (
@@ -7,9 +8,7 @@ const Footer = () => {
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 justify-center items-start">
                     <div className="flex flex-col items-center md:items-start">
-                        <h2 className="text-3xl font-bold text-black dark:text-white font-sans">
-                            DERYA RAKOR
-                        </h2>
+                        <img src={logo} alt="Derya Rakor Logo" className="w-48 h-auto" />
                         <div className="flex space-x-4 mt-8">
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                 <SiFacebook className="text-xl sm:text-2xl lg:text-3xl text-black dark:text-white hover:text-[#D22128] transition-colors" />
