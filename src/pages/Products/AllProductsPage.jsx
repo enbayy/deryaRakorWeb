@@ -25,9 +25,9 @@ const UretimPage = () => {
     const [imageLoaded, setImageLoaded] = useState({});
 
     return (
-        <div className="container w-full min-h-screen bg-white flex flex-col items-center">
+        <div className="container w-full min-h-screen bg-white dark:bg-black flex flex-col items-center">
             <div className="w-full px-4 py-12">
-                <h2 className="text-4xl font-semibold text-center mb-10 text-gray-800 font-sans tracking-wide">
+                <h2 className="text-4xl font-semibold text-center mb-10 text-black dark:text-white font-sans tracking-wide">
                     ÜRÜN KATEGORİLERİ
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -35,19 +35,19 @@ const UretimPage = () => {
                         <Link
                             key={category.id}
                             to={`/urunlerimiz/${encodeURIComponent(category.title.toLowerCase().replace(/\s+/g, "-"))}`}
-                            className="flex flex-col items-center bg-white shadow-xl rounded-2xl p-6 border border-gray-300 transition-transform transform hover:scale-105 hover:shadow-2xl"
+                            className="flex flex-col items-center bg-white dark:bg-black shadow-xl rounded-2xl p-6 border border-gray-300 transition-transform transform hover:scale-105 hover:shadow-2xl"
                         >
                             <div className="w-full h-56 flex justify-center items-center overflow-hidden rounded-lg">
                                 <img src={category.image} alt={category.title} className="w-full h-full object-contain" />
                             </div>
-                            <h3 className="mt-6 text-xl font-bold text-center text-gray-900 uppercase">{category.title}</h3>
+                            <h3 className="mt-6 text-xl font-bold text-center text-black dark:text-white  uppercase">{category.title}</h3>
                         </Link>
                     ))}
                 </div>
             </div>
 
             <div className="container w-full px-4 py-12">
-                <h2 className="text-4xl font-extrabold text-center mb-10 text-gray-800 uppercase tracking-wide">
+                <h2 className="text-4xl font-extrabold text-center mb-10 text-black dark:text-white uppercase tracking-wide">
                     Üretimden Görseller
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -65,7 +65,7 @@ const UretimPage = () => {
                             <img
                                 src={image}
                                 alt={`Üretim ${index + 1}`}
-                                className={`w-full h-76 object-cover transition-opacity duration-500 ${imageLoaded[index] ? "opacity-100" : "opacity-0"}`}
+                                className={`w-full h-76 object-cover ${imageLoaded[index] ? "opacity-100" : "opacity-0"} transition-transform duration-300 ease-in-out group-hover:scale-105`}
                                 onLoad={() => setImageLoaded((prev) => ({ ...prev, [index]: true }))}
                             />
                             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

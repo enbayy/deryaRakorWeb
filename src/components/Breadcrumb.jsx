@@ -7,8 +7,8 @@ const Breadcrumb = () => {
     if (pathnames.length === 0) return null;
 
     return (
-        <nav className="bg-gray-50 dark:bg-gray-800 py-2 px-4 flex justify-center">
-            <ul className="flex space-x-2 text-red-600 dark:text-red-400 font-semibold font-sans">
+        <nav className="bg-gray-50 dark:bg-gray-900 py-2 px-4 flex justify-center">
+            <ul className="flex space-x-2 text-[#D22128] font-semibold font-sans">
                 <li>
                     <Link to="/" className="hover:underline">
                         Anasayfa

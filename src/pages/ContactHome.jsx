@@ -2,20 +2,20 @@ import React from "react";
 
 const ContactHome = () => {
   return (
-    <div className="container bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300 p-8 rounded-xl">
-      <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">İletişim Bilgileri</h2>
+    <div className="container bg-white dark:bg-black text-black dark:text-white p-8 rounded-xl">
+      <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 font-sans">İletişim Bilgileri</h2>
 
       <div className="flex flex-col md:flex-col lg:flex-row items-start gap-8">
         <div className="space-y-4 w-full lg:w-1/2">
-          <p className="text-lg"><span className="font-semibold text-gray-900 dark:text-white">Adres:</span> Fevzi Çakmak Mh. Bayır Özel Org. San. 10670. Sok. No:31 - 31A Karatay- KONYA / TURKIYE</p>
-          <p className="text-lg"><span className="font-semibold text-gray-900 dark:text-white">Telefon:</span> +90 332 502 09 36</p>
-          <p className="text-lg"><span className="font-semibold text-gray-900 dark:text-white">Faks:</span> +90 332 502 09 38</p>
-          <p className="text-lg">
-            <span className="font-semibold text-gray-900 dark:text-white">Web:</span> 
+          <p className="text-lg font-sans"><span className="font-semibold text-gray-900 dark:text-white">Adres:</span> Fevzi Çakmak Mh. Bayır Özel Org. San. 10670. Sok. No:31 - 31A Karatay- KONYA / TURKIYE</p>
+          <p className="text-lg font-sans"><span className="font-semibold text-gray-900 dark:text-white">Telefon:</span> +90 332 502 09 36</p>
+          <p className="text-lg font-sans"><span className="font-semibold text-gray-900 dark:text-white">Faks:</span> +90 332 502 09 38</p>
+          <p className="text-lg font-sans">
+            <span className="font-semibold text-gray-900 dark:text-white">Web:</span>
             <a href="https://www.deryarakor.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 transition"> www.deryarakor.com</a>
           </p>
-          <p className="text-lg">
-            <span className="font-semibold text-gray-900 dark:text-white">E-Posta:</span> 
+          <p className="text-lg font-sans">
+            <span className="font-semibold text-gray-900 dark:text-white">E-Posta:</span>
             <a href="mailto:info@deryarakor.com" className="text-blue-500 hover:text-blue-600 transition"> info@deryarakor.com</a>
           </p>
         </div>
