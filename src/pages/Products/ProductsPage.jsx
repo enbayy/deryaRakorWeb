@@ -16,11 +16,10 @@ const ProductsPage = () => {
     return (
         <div className="container w-full bg-white dark:bg-black flex flex-col items-center">
             <div className=" w-full px-4 py-12">
-                <h2 className="text-4xl font-semibold text-center mb-10 text-black dark:text-white font-sans tracking-wide">
+                <h2 data-aos="fade-left" className="text-4xl font-semibold text-center mb-10 text-black dark:text-white font-sans tracking-wide">
                    ÜRÜN KATEGORİLERİ
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
+                <div data-aos="fade-right" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {categories.map((category) => (
                         <Link
                             key={category.id}

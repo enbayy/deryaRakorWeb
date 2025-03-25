@@ -48,7 +48,7 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="w-full">
+      <div data-aos="fade-left" data-aos-delay="200" className="w-full">
         <div className="relative overflow-hidden">
           <Slider {...settings}>
             {sliderImages.map((img, index) => (
