@@ -29,17 +29,16 @@ const AboutPage = () => {
 
     return (
         <div className="bg-white dark:bg-black container w-full min-h-screen flex flex-col items-center px-4 md:px-12 lg:px-20">
-            <h1 className="text-black dark:text-white text-4xl font-bold text-center mt-8 mb-6">Hakkımızda</h1>
+            <h1 className="text-black dark:text-white text-4xl font-bold text-center mt-8">Hakkımızda</h1>
 
-            <div className="w-full max-w-6xl relative">
+            <div className="w-full max-w-6xl relative mt-8">
                 {!videoLoaded && (
-                    <div className="absolute inset-0 flex justify-center items-center bg-gray-200">
-                        <p className="text-gray-700 font-semibold text-lg">Video yükleniyor...</p>
-                    </div>
+                    <p className="absolute inset-0 flex justify-center items-center bg-gray-200 text-gray-700 font-semibold text-lg">
+                        Video yükleniyor...
+                    </p>
                 )}
                 <video
-                    className={`w-full h-auto rounded-lg shadow-lg object-cover ${videoLoaded ? "block" : "hidden"}`}
-                    style={{ aspectRatio: "16/9" }}
+                    className={`w-auto h-auto rounded-lg object-contain ${videoLoaded ? "block" : "hidden"}`}
                     controls
                     onLoadedData={() => setVideoLoaded(true)}
                 >
