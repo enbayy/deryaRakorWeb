@@ -31,7 +31,6 @@ const normalizeTitle = (title) => {
 const CategoryDetail = () => {
     const { title } = useParams();
     const formattedTitle = normalizeTitle(title);
-
     const category = categories.find(cat => normalizeTitle(cat.title) === formattedTitle);
 
     if (!category) {

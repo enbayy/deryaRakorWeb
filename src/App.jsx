@@ -107,9 +107,7 @@ const App = () => {
                     <Route path="/urunlerimiz" element={<AllProducts />} />
                 </Routes>
             </Suspense>
-
             <Footer />
-
             <a
                 href="https://wa.me/905522312086"
                 target="_blank"
