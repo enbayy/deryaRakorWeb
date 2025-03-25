@@ -4,6 +4,7 @@ import ResponsiveMenu from "./ResponsiveMenu";
 import DarkMode from "./DarkMode";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/deryaLogo.png";
+import Flag from "react-world-flags";
 
 export const MenuLinks = [
   { id: 1, name: "ANASAYFA", link: "/" },
@@ -14,10 +15,15 @@ export const MenuLinks = [
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("TR");
   const location = useLocation();
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+  };
+
+  const handleLanguageChange = (language) => {
+    setSelectedLanguage(language);
   };
 
   return (
@@ -50,12 +56,18 @@ const Navbar = () => {
           </ul>
         </nav>
         <div className="flex items-center gap-4">
-          <button className="hidden lg:block text-white bg-[#D22128] hover:bg-black dark:hover:bg-red-400 transition-all duration-300 px-5 py-2 text-lg font-semibold rounded-xl">
-            TR
-          </button>
-          <button className="hidden lg:block text-white bg-[#D22128] hover:bg-black dark:hover:bg-red-400 transition-all duration-300 px-5 py-2 text-lg font-semibold rounded-xl">
-            EN
-          </button>
+          <div
+            className={`hidden lg:block cursor-pointer ${selectedLanguage === "TR" ? "scale-125" : ""}`}
+            onClick={() => handleLanguageChange("TR")}
+          >
+            <Flag code="TR" alt="Türk Bayrağı" className="w-8 h-8" />
+          </div>
+          <div
+            className={`hidden lg:block cursor-pointer ${selectedLanguage === "GB" ? "scale-125" : ""}`}
+            onClick={() => handleLanguageChange("GB")}
+          >
+            <Flag code="GB" alt="İngiltere Bayrağı" className="w-8 h-8" />
+          </div>
           <DarkMode />
           <div className="lg:hidden">
             {showMenu ? (
