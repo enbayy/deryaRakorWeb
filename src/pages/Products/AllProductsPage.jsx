@@ -10,6 +10,7 @@ import slider3 from "../../assets/slider3.png";
 import slider4 from "../../assets/slider4.png";
 import slider5 from "../../assets/slider5.png";
 import slider6 from "../../assets/slider6.png";
+import { useTranslation } from "react-i18next";
 
 const categories = [
     { id: 1, title: "HİDROLİK LİFT PARÇALARI", image: foto1 },
@@ -21,6 +22,7 @@ const categories = [
 const galleryImages = [slider1, slider2, slider3, slider4, slider5, slider6];
 
 const UretimPage = () => {
+    const { t } = useTranslation();
     const [selectedImage, setSelectedImage] = useState(null);
     const [imageLoaded, setImageLoaded] = useState({});
 
@@ -28,7 +30,7 @@ const UretimPage = () => {
         <div className="container w-full min-h-screen bg-white dark:bg-black flex flex-col items-center">
             <div className="w-full px-4 py-12">
                 <h2 className="text-4xl font-semibold text-center mb-10 text-black dark:text-white font-sans tracking-wide">
-                    ÜRÜN KATEGORİLERİ
+                    {t("productCategories")}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {categories.map((category) => (
@@ -40,7 +42,9 @@ const UretimPage = () => {
                             <div className="w-full h-56 flex justify-center items-center overflow-hidden rounded-lg">
                                 <img src={category.image} alt={category.title} className="w-full h-full object-contain" />
                             </div>
-                            <h3 className="mt-6 text-xl font-bold text-center text-black dark:text-white  uppercase">{category.title}</h3>
+                            <h3 className="mt-6 text-xl font-bold text-center text-black dark:text-white uppercase">
+                                {t(category.title)}
+                            </h3>
                         </Link>
                     ))}
                 </div>
@@ -48,7 +52,7 @@ const UretimPage = () => {
 
             <div className="container w-full px-4 py-12">
                 <h2 className="text-4xl font-extrabold text-center mb-10 text-black dark:text-white uppercase tracking-wide">
-                    Üretimden Görseller
+                    {t("productionImages")}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     {galleryImages.map((image, index) => (
@@ -59,7 +63,7 @@ const UretimPage = () => {
                         >
                             {!imageLoaded[index] && (
                                 <div className="absolute inset-0 flex justify-center items-center bg-gray-200">
-                                    <p className="text-gray-700 font-semibold text-sm">Görsel yükleniyor...</p>
+                                    <p className="text-gray-700 font-semibold text-sm">{t("imageLoading")}</p> {/* Dinamik metin */}
                                 </div>
                             )}
                             <img
@@ -69,7 +73,7 @@ const UretimPage = () => {
                                 onLoad={() => setImageLoaded((prev) => ({ ...prev, [index]: true }))}
                             />
                             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <p className="text-white font-semibold text-lg">Görseli İncele</p>
+                                <p className="text-white font-semibold text-lg">{t("viewImage")}</p> {/* Dinamik metin */}
                             </div>
                         </div>
                     ))}

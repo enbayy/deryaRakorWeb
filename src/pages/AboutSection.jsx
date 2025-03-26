@@ -2,9 +2,12 @@ import React from "react";
 import aboutImage from "../assets/slider13.png";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/deryaLogo.png";
+import { useTranslation } from "react-i18next"; 
 
 const AboutSection = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation(); 
+
   return (
     <div className="container bg-white dark:bg-dark py-12 sm:grid sm:place-items-center duration-300">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
@@ -12,10 +15,10 @@ const AboutSection = () => {
           <div className="space-y-6 sm:p-16 pb-6 text-left">
             <img src={logo} alt="Derya Rakor Logo" className="w-60 h-auto" />
             <p data-aos="fade-up" className="text-lg leading-8 tracking-wide text-black dark:text-white font-poppins">
-              30 yıllık deneyimimizle sektörde kaliteyi temsil ediyoruz. Güçlü altyapımız ve yenilikçi çözümlerimizle iş ortaklarımıza değer katıyoruz.
+              {t("aboutDescription1")}
             </p>
             <p data-aos="fade-up" className="text-lg leading-8 tracking-wide text-black dark:text-white font-poppins">
-              Sektördeki uzmanlığımızla müşterilerimizin rekabet avantajı elde etmesini sağlıyor, her projede kaliteyi ve müşteri memnuniyetini ön planda tutuyoruz.
+              {t("aboutDescription2")}
             </p>
 
             <button
@@ -23,7 +26,7 @@ const AboutSection = () => {
               data-aos="fade-up"
               className="button-outline font-sans font-semibold dark:text-white"
             >
-              Daha Fazlası
+              {t("learnMore")}
             </button>
           </div>
         </div>

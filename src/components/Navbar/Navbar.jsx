@@ -5,17 +5,18 @@ import DarkMode from "./DarkMode";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/deryaLogo.png";
 import Flag from "react-world-flags";
+import { useTranslation } from "react-i18next";
 
 export const MenuLinks = [
-  { id: 1, name: "ANASAYFA", link: "/" },
-  { id: 2, name: "ÜRETİM", link: "/urunlerimiz" },
-  { id: 3, name: "HAKKIMIZDA", link: "/hakkimizda" },
-  { id: 4, name: "İLETİŞİM", link: "/iletisim" },
+  { id: 1, name: "home", link: "/" },   
+  { id: 2, name: "production", link: "/urunlerimiz" }, 
+  { id: 3, name: "about", link: "/hakkimizda" }, 
+  { id: 4, name: "contact", link: "/iletisim" },
 ];
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const [showMenu, setShowMenu] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("TR");
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -23,8 +24,10 @@ const Navbar = () => {
   };
 
   const handleLanguageChange = (language) => {
-    setSelectedLanguage(language);
+    i18n.changeLanguage(language);
+    localStorage.setItem('language', language); 
   };
+
 
   return (
     <header className="relative bg-white dark:bg-black text-black dark:text-white z-50">
@@ -43,13 +46,9 @@ const Navbar = () => {
                       ? "text-[#D22128] font-bold font-sans border-b-2 border-[#D22128]"
                       : "text-[#1E293B] dark:text-white hover:text-[#D22128] font-sans"
                     }
-                    before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] 
-                    before:bg-[#D22128] dark:before:bg-[#D22128] before:scale-x-0 before:origin-right 
-                    before:transition before:duration-300 before:ease-in-out 
-                    hover:before:scale-x-100 hover:before:origin-left font-sans
                   `}
                 >
-                  {name}
+                  {t(name)} 
                 </Link>
               </li>
             ))}
@@ -57,14 +56,14 @@ const Navbar = () => {
         </nav>
         <div className="flex items-center gap-4">
           <div
-            className={`hidden lg:block cursor-pointer ${selectedLanguage === "TR" ? "scale-125" : ""}`}
-            onClick={() => handleLanguageChange("TR")}
+            className={`hidden lg:block cursor-pointer ${i18n.language === "tr" ? "opacity-100 scale-110" : "opacity-50"}`}
+            onClick={() => handleLanguageChange("tr")}
           >
             <Flag code="TR" alt="Türk Bayrağı" className="w-8 h-8" />
           </div>
           <div
-            className={`hidden lg:block cursor-pointer ${selectedLanguage === "GB" ? "scale-125" : ""}`}
-            onClick={() => handleLanguageChange("GB")}
+            className={`hidden lg:block cursor-pointer ${i18n.language === "en" ? "opacity-100 scale-110" : "opacity-50"}`}
+            onClick={() => handleLanguageChange("en")}
           >
             <Flag code="GB" alt="İngiltere Bayrağı" className="w-8 h-8" />
           </div>

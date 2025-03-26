@@ -12,10 +12,12 @@ import slider9 from "../assets/slider3.png";
 import slider10 from "../assets/slider4.png";
 import slider11 from "../assets/slider5.png";
 import slider12 from "../assets/slider6.png";
+import { useTranslation } from "react-i18next";
 
 const AboutPage = () => {
     const [videoLoaded, setVideoLoaded] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
+    const { t } = useTranslation();
 
     React.useEffect(() => {
         const handleKeyDown = (event) => {
@@ -29,8 +31,9 @@ const AboutPage = () => {
 
     return (
         <div className="bg-white dark:bg-black container w-full min-h-screen flex flex-col items-center px-4 md:px-12 lg:px-20">
-            <h1 className="text-black dark:text-white text-4xl font-bold text-center mt-8">Hakkımızda</h1>
-
+            <h1 className="text-black dark:text-white text-4xl font-bold text-center mt-8">
+                {t("about")}
+            </h1>
             <div className="w-full max-w-6xl relative mt-8">
                 {!videoLoaded && (
                     <p className="absolute inset-0 flex justify-center items-center bg-gray-200 text-gray-700 font-semibold text-lg">

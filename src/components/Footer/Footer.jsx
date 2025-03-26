@@ -1,8 +1,11 @@
 import React from "react";
 import { SiFacebook, SiLinkedin, SiInstagram, SiTwitter } from "react-icons/si";
 import logo from "../../assets/deryaLogo.png";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+    const { t } = useTranslation();
+
     return (
         <footer className="bg-white dark:bg-black py-16">
             <div className="container mx-auto">
@@ -27,40 +30,40 @@ const Footer = () => {
 
                     <div className="flex flex-col items-center md:items-start">
                         <h4 className="text-2xl font-semibold text-black dark:text-white mb-4 font-sans">
-                            ÜRÜNLER
+                            {t("products")}
                         </h4>
                         <ul className="space-y-2">
                             <li>
                                 <a href="/urunlerimiz/hi̇droli̇k-li̇ft-parçalari" className="text-lg text-black dark:text-white font-sans hover:text-[#D22128] transition-colors font-semibold">
-                                    Hidrolik Lift Parçaları
+                                    {t("hidrolik_lift_parcalari")}
                                 </a>
                             </li>
                             <li>
                                 <a href="/urunlerimiz/hi̇droli̇k-si̇li̇ndi̇rler" className="text-lg text-black dark:text-white font-sans hover:text-[#D22128] transition-colors font-semibold">
-                                    Hidrolik Silindirler
+                                    {t("hidrolik_silindirler")}
                                 </a>
                             </li>
                             <li>
                                 <a href="/urunlerimiz/hi̇droli̇k-devre-borulari" className="text-lg text-black dark:text-white font-sans hover:text-[#D22128] transition-colors font-semibold">
-                                    Hidrolik Devre Boruları
+                                    {t("hidrolik_devre_borulari")}
                                 </a>
                             </li>
                             <li>
                                 <a href="/urunlerimiz/hi̇droli̇k-pnömati̇k-hortum-ve-başliklari" className="text-lg text-black dark:text-white font-sans hover:text-[#D22128] transition-colors font-semibold">
-                                    Hidrolik-Pnömatik Hortum ve Başlıkları
+                                    {t("hidrolik_pnomatik_hortum_ve_basliklari")}
                                 </a>
                             </li>
                         </ul>
                     </div>
 
                     <div className="flex flex-col items-center md:items-start">
-                        <h4 className="text-2xl font-semibold text-black dark:text-white mb-4 font-sans">İLETİŞİM</h4>
+                        <h4 className="text-2xl font-semibold text-black dark:text-white mb-4 font-sans">{t("contact")}</h4>
                         <p className="text-lg text-black dark:text-white font-sans font-semibold">info@deryarakor.com</p>
                         <p className="text-lg text-black dark:text-white font-sans font-semibold">(0332) 502 09 36</p>
                     </div>
 
                     <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                        <h3 className="text-2xl font-semibold text-black dark:text-white mb-4 font-sans">KONUM BİLGİLERİ</h3>
+                        <h3 className="text-2xl font-semibold text-black dark:text-white mb-4 font-sans">{t("location")}</h3>
                         <p className="text-lg leading-relaxed text-black dark:text-white font-sans font-semibold">
                             Fevziçakmak, 10670. Sk. Bayır Özel Org. San. Bölg No:31 D:31A,<br />
                             42050 Karatay/Konya
@@ -72,9 +75,10 @@ const Footer = () => {
 
                 <div className="text-center -mb-8">
                     <p className="text-xl font-semibold text-black dark:text-white font-sans">
-                        Derya Rakor Hidrolik Rakor Mak. San. Tic. Ltd. Şti. © 2025
+                        {t('footer_info')}
                     </p>
                 </div>
+
             </div>
         </footer>
     );

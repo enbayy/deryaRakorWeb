@@ -1,13 +1,17 @@
 import React, { useEffect, useState, useRef } from "react";
 import logo from "../assets/deryaLogo.png";
+import { useTranslation } from "react-i18next"; 
 
 const WhyChooseUs = () => {
+  const { t } = useTranslation(); 
+
   const stats = [
-    { value: 30, label: "Yıllık Tecrübe", suffix: "+" },
-    { value: 1500, label: "Kapalı Üretim Alanı", suffix: "m²" },
-    { value: 100, label: "Müşteri Memnuniyeti", suffix: "%" },
-    { value: 50, label: "Deneyimli Çalışan", suffix: "+" },
+    { value: 30, label: "yearsOfExperience", suffix: "+", tr: "Yıllık Deneyim" },
+    { value: 1500, label: "closedProductionArea", suffix: "m²", tr: "Kapalı Üretim Alanı" },
+    { value: 100, label: "customerSatisfaction", suffix: "%", tr: "Müşteri Memnuniyeti" },
+    { value: 50, label: "experiencedEmployees", suffix: "+", tr: "Deneyimli Çalışanlar" },
   ];
+
 
   const [counts, setCounts] = useState(stats.map(() => 0));
   const sectionRef = useRef(null);
@@ -47,8 +51,7 @@ const WhyChooseUs = () => {
       <div className="flex flex-col justify-center items-center max-w-6xl mx-auto text-center">
         <img src={logo} alt="Derya Rakor Logo" className="w-60 h-auto" />
         <p className="text-black dark:text-white text-lg leading-relaxed font-poppins">
-          30 yılı aşkın tecrübemiz, yüksek kalite standartlarımız ve müşteri
-          memnuniyetine verdiğimiz önemle sektörde fark yaratıyoruz.
+          {t("whyChooseUsDescription")}
         </p>
       </div>
 
@@ -58,18 +61,19 @@ const WhyChooseUs = () => {
             <h3 className="text-4xl font-bold text-[#D22128] font-sans">
               {counts[index]}{stat.suffix}
             </h3>
-            <p className="text-gray-800 mt-3 font-medium font-poppins">{stat.label}</p>
+            <p className="text-gray-800 mt-3 font-medium font-poppins">
+              {t(stat.label)}
+            </p>
           </div>
         ))}
       </div>
 
       <div className="mt-20 max-w-4xl mx-auto text-center">
         <h3 className="text-3xl font-semibold text-[#D22128] font-sans">
-          Kalite ve Güvenin Adresi
+          {t("qualityAndReliability")}
         </h3>
-        <p className="text-black dark:text-white mt-5 text-lg leading-relaxed font-poppinsökm">
-          Derya Rakor olarak, hidrolik bağlantı elemanları sektöründe güvenilir bir marka
-          olma hedefiyle, müşteri ihtiyaçlarını en iyi şekilde karşılamak için çalışıyoruz.
+        <p className="text-black dark:text-white mt-5 text-lg leading-relaxed font-poppins">
+          {t("companyDescription")}
         </p>
       </div>
 
@@ -78,7 +82,7 @@ const WhyChooseUs = () => {
           href="/iletisim"
           className="rounded-md border-2 border-[#D22128] hover:bg-[#D22128]/80 hover:text-black dark:text-white duration-500 py-2 px-6 text-[#D22128] tracking-wider font-sans font-semibold"
         >
-          İletişime Geç
+          {t("contactUs")}
         </button>
       </div>
     </section>

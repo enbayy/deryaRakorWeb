@@ -8,6 +8,7 @@ import hidrolikDevreBorulari from "../data/hidrolikDevreBorulari";
 import hidrolikLiftParcalari from "../data/hidrolikLiftParcalari";
 import hidrolikSilindirler from "../data/hidrolikSilindirler";
 import hidrolikPnomatikHortumVeBasliklari from "../data/hidrolikPnomatikHortumVeBasliklari";
+import { useTranslation } from "react-i18next";
 
 const categories = [
     { title: "HİDROLİK LİFT PARÇALARI", image: foto1, products: hidrolikLiftParcalari },
@@ -32,6 +33,7 @@ const CategoryDetail = () => {
     const { title } = useParams();
     const formattedTitle = normalizeTitle(title);
     const category = categories.find(cat => normalizeTitle(cat.title) === formattedTitle);
+    const { t } = useTranslation();
 
     if (!category) {
         return <h2 className="text-center text-red-600 text-3xl mt-10">Kategori Bulunamadı</h2>;
@@ -41,11 +43,11 @@ const CategoryDetail = () => {
         <div className="w-full min-h-screen flex flex-col items-center bg-gray-100">
             <div className="max-w-4xl w-full px-4 py-10">
                 <h2 className="text-3xl font-bold text-center mb-6 text-gray-800 uppercase">
-                    {category.title}
+                    {t(category.title)}
                 </h2>
 
                 <p className="text-lg text-gray-700 mt-4 text-center">
-                    {category.products.length > 0 ? "Bu kategorideki ürünler:" : "Bu kategori için ürün bulunmamaktadır."}
+                    <p> {t("desc")}</p>
                 </p>
 
                 {category.products.length > 0 && (
