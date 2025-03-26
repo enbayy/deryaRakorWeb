@@ -7,10 +7,10 @@ import foto4 from "../../assets/hortumBasliklari.png";
 import { useTranslation } from "react-i18next";
 
 const categories = [
-    { id: 1, title: "hidrolik_lift_parcalari", image: foto1 },
-    { id: 2, title: "hidrolik_silindirler", image: foto2 },
-    { id: 3, title: "hidrolik_devre_borulari", image: foto3 },
-    { id: 4, title: "hidrolik_pnomatik_hortum_ve_basliklari", image: foto4 },
+    { id: 1, title: "HİDROLİK LİFT PARÇALARI", image: foto1 },
+    { id: 2, title: "HİDROLİK SİLİNDİRLER", image: foto2 },
+    { id: 3, title: "HİDROLİK DEVRE BORULARI", image: foto3 },
+    { id: 4, title: "HİDROLİK-PNÖMATİK HORTUM VE BAŞLIKLARI", image: foto4 },
 ];
 
 const ProductsPage = () => {

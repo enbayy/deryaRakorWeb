@@ -23,11 +23,11 @@ const ContactHome = () => {
           </p>
           <p className="text-lg font-sans">
             <span className="font-semibold text-gray-900 dark:text-white">{t("Web")}:</span>
-            <a href="https://www.deryarakor.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 transition"> www.deryarakor.com</a>
+            <a href="https://www.deryarakor.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 transition hover:underline"> www.deryarakor.com</a>
           </p>
           <p className="text-lg font-sans">
             <span className="font-semibold text-gray-900 dark:text-white">{t("Email")}:</span>
-            <a href="mailto:info@deryarakor.com" className="text-blue-500 hover:text-blue-600 transition"> info@deryarakor.com</a>
+            <a href="mailto:info@deryarakor.com" className="text-blue-500 hover:text-blue-600 transition hover:underline"> info@deryarakor.com</a>
           </p>
         </div>
 

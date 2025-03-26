@@ -9,7 +9,7 @@ const AboutSection = () => {
   const { t } = useTranslation(); 
 
   return (
-    <div className="container bg-white dark:bg-dark py-12 sm:grid sm:place-items-center duration-300">
+    <div className="container bg-white dark:bg-black py-12 sm:grid sm:place-items-center duration-300">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
         <div>
           <div className="space-y-6 sm:p-16 pb-6 text-left">
