@@ -1,9 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import logo from "../assets/deryaLogo.png";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const WhyChooseUs = () => {
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const stats = [
     { value: 30, label: "yearsOfExperience", suffix: "+", tr: "Yıllık Deneyim" },
@@ -79,7 +81,7 @@ const WhyChooseUs = () => {
 
       <div className="text-center mt-6">
         <button
-          href="/iletisim"
+          onClick={() => navigate("/iletisim")}
           className="rounded-md border-2 border-[#D22128] hover:bg-[#D22128]/80 hover:text-black dark:text-white duration-500 py-2 px-6 text-[#D22128] tracking-wider font-sans font-semibold"
         >
           {t("contactUs")}
