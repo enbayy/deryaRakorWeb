@@ -35,22 +35,22 @@ const Footer = () => {
                         <ul className="space-y-2">
                             <li>
                                 <a href="/urunlerimiz/hi̇droli̇k-li̇ft-parçalari" className="text-lg text-black dark:text-white font-sans hover:text-[#D22128] transition-colors font-semibold">
-                                    {t("hidrolik_lift_parcalari")}
+                                    {t("HİDROLİK LİFT PARÇALARI")}
                                 </a>
                             </li>
                             <li>
                                 <a href="/urunlerimiz/hi̇droli̇k-si̇li̇ndi̇rler" className="text-lg text-black dark:text-white font-sans hover:text-[#D22128] transition-colors font-semibold">
-                                    {t("hidrolik_silindirler")}
+                                    {t("HİDROLİK SİLİNDİRLER")}
                                 </a>
                             </li>
                             <li>
                                 <a href="/urunlerimiz/hi̇droli̇k-devre-borulari" className="text-lg text-black dark:text-white font-sans hover:text-[#D22128] transition-colors font-semibold">
-                                    {t("hidrolik_devre_borulari")}
+                                    {t("HİDROLİK DEVRE BORULARI")}
                                 </a>
                             </li>
                             <li>
                                 <a href="/urunlerimiz/hi̇droli̇k-pnömati̇k-hortum-ve-başliklari" className="text-lg text-black dark:text-white font-sans hover:text-[#D22128] transition-colors font-semibold">
-                                    {t("hidrolik_pnomatik_hortum_ve_basliklari")}
+                                    {t("HİDROLİK-PNÖMATİK HORTUM VE BAŞLIKLARI")}
                                 </a>
                             </li>
                         </ul>
