@@ -120,7 +120,7 @@ const App = () => {
                 href="https://wa.me/905543059386"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fixed bottom-3 right-3 z-50 flex flex-col items-center space-y-2 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full"
+                className="fixed bottom-3 right-3 z-30 flex flex-col items-center space-y-2 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full"
             >
                 <RiWhatsappFill size={25} />
             </a>

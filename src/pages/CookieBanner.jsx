@@ -18,7 +18,7 @@ const CookieBanner = () => {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 bg-black/50 text-gray-300 p-5 flex justify-between items-center leading-relaxed flex-col sm:flex-row">
+        <div className="fixed bottom-0 left-0 right-0 bg-gray-950 text-gray-300 p-5 flex justify-between items-center leading-relaxed flex-col sm:flex-row z-40">
             <p className="text-base flex-1 pr-6 font-poppins">
                 {t("cookieMessage")}{" "}
                 <a href="/cerez-politikasi" className="text-blue-400 hover:underline">
