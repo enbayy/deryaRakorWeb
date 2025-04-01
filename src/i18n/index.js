@@ -48,6 +48,16 @@ const resources = {
             "submitMessage": "Submit",
             "contactInformation": "Contact Information",
             "desc": "Products in this category:",
+            "techNews": "Technology News",
+            "healthNews": "Health News",
+            "economyNews": "Economy News",
+            "readMore": "More",
+            "cookieMessage": "We use cookies to provide you with a better service, analyze your site usage, and show content tailored to your preferences. By clicking the 'Accept' button, you consent to the use of cookies. For more details, visit our",
+            "cookiePolicy": "Cookie Policy",
+            "accept": "Accept",
+            "reject": "Reject",
+            "comingSoon": "Coming Soon!",
+            "eSalesMessage": "We are working on our platform. We will be with you very soon!",
         }
     },
     tr: {
@@ -96,6 +106,16 @@ const resources = {
             "submitMessage": "Gönder",
             "contactInformation": "İrtibat Bilgileri",
             "desc": "Bu kategorideki ürünler:",
+            "techNews": "Teknoloji Haberleri",
+            "healthNews": "Sağlık Haberleri",
+            "economyNews": "Ekonomi Haberleri",
+            "readMore": "Daha Fazla",
+            "cookieMessage": "Sizlere daha iyi bir hizmet sunabilmek, site kullanımınızı analiz edebilmek ve tercihlerinize uygun içerikler gösterebilmek için çerezlerden faydalanıyoruz. ‘Kabul Et’ butonuna tıklayarak çerez kullanımını onaylamış olursunuz. Detaylı bilgi için",
+            "cookiePolicy": "Çerez Politikamızı",
+            "accept": "Kabul Et",
+            "reject": "Reddet",
+            "comingSoon": "Yakında Hizmetinizde!",
+            "eSalesMessage": "Platformumuz üzerinde çalışmalarımız devam ediyor. Çok yakında sizlerle olacağız!",
         }
     }
 };
