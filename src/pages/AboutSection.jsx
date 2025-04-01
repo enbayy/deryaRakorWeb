@@ -1,19 +1,21 @@
 import React from "react";
 import aboutImage from "../assets/slider13.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/deryaLogo.png";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 
 const AboutSection = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
 
   return (
     <div className="container bg-white dark:bg-black py-12 sm:grid sm:place-items-center duration-300">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
         <div>
           <div className="space-y-6 sm:p-16 pb-6 text-left">
-            <img src={logo} alt="Derya Rakor Logo" className="w-60 h-auto" />
+            <Link to="/" className="bg-white rounded-full inline-block">
+              <img src={logo} alt="Derya Rakor Logo" className="w-60 h-auto" />
+            </Link>
             <p data-aos="fade-up" className="text-lg leading-8 tracking-wide text-black dark:text-white font-poppins">
               {t("aboutDescription1")}
             </p>

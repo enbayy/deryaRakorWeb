@@ -46,8 +46,8 @@ const NewsDetail = () => {
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold text-center text-gray-800 mb-6 font-sans">{t(news.title)}</h1>
-      <p className="text-lg text-gray-700 text-center mb-8 font-poppins">{t(news.content)}</p>
+      <h1 className="text-4xl font-bold text-center text-black dark:text-white mb-6 font-sans">{t(news.title)}</h1>
+      <p className="text-lg text-gray-700 dark:text-white text-center mb-8 font-poppins">{t(news.content)}</p>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {news.images.map((image, index) => (
           <img

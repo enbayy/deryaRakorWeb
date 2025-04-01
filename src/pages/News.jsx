@@ -35,7 +35,7 @@ const News = () => {
         return (
           <div key={news.id} className="mb-12">
             <h2
-              className="text-3xl font-bold text-center mb-6 text-gray-800 cursor-pointer hover:text-blue-600 transition"
+              className="text-3xl font-bold text-center mb-6 text-black dark:text-white transition"
               onClick={() => navigate(`/haberler/${formattedTitle}`)}
             >
               {t(news.titleKey)}
@@ -53,7 +53,7 @@ const News = () => {
             <div className="flex justify-center mt-6">
               <button
                 onClick={() => navigate(`/haberler/${news.titleKey}`)}
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition"
+                className="bg-[#D22128] text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-red-700 transition"
               >
                 {t("readMore")}
               </button>

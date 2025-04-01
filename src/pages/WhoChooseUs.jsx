@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import logo from "../assets/deryaLogo.png";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const WhyChooseUs = () => {
   const { t } = useTranslation();
@@ -50,13 +50,15 @@ const WhyChooseUs = () => {
   return (
     <section ref={sectionRef} className="container bg-white dark:bg-black py-12 px-6 md:px-16 lg:px-24">
       <div className="flex flex-col justify-center items-center max-w-6xl mx-auto text-center">
-        <img src={logo} alt="Derya Rakor Logo" className="w-60 h-auto" />
-        <p className="text-black dark:text-white text-lg leading-relaxed font-poppins">
+        <Link to="/" className="bg-white rounded-full">
+          <img src={logo} alt="Derya Rakor Logo" className="w-60 h-auto" />
+        </Link>
+        <p className="text-black dark:text-white text-lg leading-relaxed font-poppins mt-8">
           {t("whyChooseUsDescription")}
         </p>
       </div>
 
-      <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+      <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
         {stats.map((stat, index) => (
           <div key={index} className="bg-white shadow-lg p-8 rounded-2xl transform transition duration-300 hover:scale-105">
             <h3 className="text-4xl font-bold text-[#D22128] font-sans">
@@ -69,7 +71,7 @@ const WhyChooseUs = () => {
         ))}
       </div>
 
-      <div className="mt-20 max-w-4xl mx-auto text-center">
+      <div className="mt-12 max-w-4xl mx-auto text-center">
         <h3 className="text-3xl font-semibold text-[#D22128] font-sans">
           {t("qualityAndReliability")}
         </h3>
