@@ -1,15 +1,15 @@
 import React from "react";
-import { MenuLinks } from "./Navbar";  
+import { MenuLinks } from "./Navbar";
 import { HiX } from "react-icons/hi";
 import Flag from "react-world-flags";
 import { useTranslation } from "react-i18next";
 
 const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
-  const { i18n, t } = useTranslation(); 
+  const { i18n, t } = useTranslation();
 
   const handleLanguageChange = (language) => {
     i18n.changeLanguage(language);
-    localStorage.setItem('language', language); 
+    localStorage.setItem('language', language);
   };
 
   return (
@@ -20,7 +20,7 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
     >
       <div>
         <div className="flex justify-between items-center">
-          <h2 className="text-2xl font-semibold font-sans">{t('menu')}</h2> 
+          <h2 className="text-2xl font-semibold font-sans">{t('menu')}</h2>
           <HiX size={30} className="cursor-pointer" onClick={toggleMenu} />
         </div>
         <nav className="mt-12">
@@ -28,7 +28,7 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
             {MenuLinks.map(({ id, name, link }) => (
               <li key={id}>
                 <a href={link} className="mb-5 inline-block font-sans font-semibold" onClick={toggleMenu}>
-                  {t(name)}  
+                  {t(name)}
                 </a>
               </li>
             ))}
@@ -37,13 +37,13 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
       </div>
       <div className="pb-6 flex justify-center gap-4">
         <div
-          className={`cursor-pointer ${i18n.language === "tr" ? "scale-125" : ""}`} 
+          className={`cursor-pointer ${i18n.language === "tr" ? "opacity-100 scale-110 border-b border-black dark:border-white" : "opacity-50"}`}
           onClick={() => handleLanguageChange("tr")}
         >
           <Flag code="TR" alt="Türk Bayrağı" className="w-8 h-8" />
         </div>
         <div
-          className={`cursor-pointer ${i18n.language === "en" ? "scale-125" : ""}`} 
+          className={`cursor-pointer ${i18n.language === "en" ? "opacity-100 scale-110 border-b border-black dark:border-white" : "opacity-50"}`}
           onClick={() => handleLanguageChange("en")}
         >
           <Flag code="GB" alt="İngiltere Bayrağı" className="w-8 h-8" />

@@ -10,6 +10,10 @@ import KategoriDetay from "./pages/CategoryDetail";
 import AboutSection from "./pages/AboutSection";
 import WhyChooseUs from "./pages/WhoChooseUs";
 import ContactHome from "./pages/ContactHome";
+import News from "./pages/News";
+import ESales from "./pages/eSales";
+import CookieBanner from "./pages/CookieBanner";
+import NewsDetail from "./pages/NewsDetail";
 
 const Hero = lazy(() => import("./pages/Hero"));
 const About = lazy(() => import("./pages/About"));
@@ -105,11 +109,15 @@ const App = () => {
                     <Route path="/urunler" element={<ProductPage />} />
                     <Route path="/urunlerimiz/:title" element={<KategoriDetay />} />
                     <Route path="/urunlerimiz" element={<AllProducts />} />
+                    <Route path="/haberler" element={<News />} />
+                    <Route path="/e-satis" element={<ESales />} />
+                    <Route path="/news/:title" element={<NewsDetail />} />
                 </Routes>
             </Suspense>
             <Footer />
+            <CookieBanner />
             <a
-                href="https://wa.me/905522312086"
+                href="https://wa.me/905543059386"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fixed bottom-3 right-3 z-50 flex flex-col items-center space-y-2 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full"

@@ -5,13 +5,13 @@ import foto2 from "../assets/hidrolikSilindir.png";
 import foto3 from "../assets/hidrolikDevreBoruları.png";
 import foto4 from "../assets/hortumBasliklari.png";
 import hidrolikDevreBorulari from "../data/hidrolikDevreBorulari";
-import hidrolikLiftParcalari from "../data/hidrolikLiftParcalari";
+import hidrolikSilindirParcalari from "../data/hidrolikSilindirParcalari";
 import hidrolikSilindirler from "../data/hidrolikSilindirler";
 import hidrolikPnomatikHortumVeBasliklari from "../data/hidrolikPnomatikHortumVeBasliklari";
 import { useTranslation } from "react-i18next";
 
 const categories = [
-    { title: "HİDROLİK LİFT PARÇALARI", image: foto1, products: hidrolikLiftParcalari },
+    { title: "HİDROLİK SİLİNDİR PARÇALARI", image: foto1, products: hidrolikSilindirParcalari },
     { title: "HİDROLİK SİLİNDİRLER", image: foto2, products: hidrolikSilindirler },
     { title: "HİDROLİK DEVRE BORULARI", image: foto3, products: hidrolikDevreBorulari },
     { title: "HİDROLİK-PNÖMATİK HORTUM VE BAŞLIKLARI", image: foto4, products: hidrolikPnomatikHortumVeBasliklari },

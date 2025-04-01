@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import slider1 from "../assets/slider13.png";
+import slider1 from "../assets/sliderr1.jpg";
 import slider2 from "../assets/slider7.png";
 import slider3 from "../assets/slider8.png";
 
@@ -29,7 +29,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="container mx-auto flex flex-col justify-center items-center py-10 relative px-4">
+    <div className="mx-auto flex flex-col justify-center items-center py-10 relative">
       <div className="text-center mb-10">
         {[text, text2].map((line, idx) => (
           <p key={idx} className="text-5xl md:text-7xl font-semibold text-[#D22128] font-stainy flex justify-center">
@@ -56,7 +56,7 @@ const Hero = () => {
                 <img
                   src={img}
                   alt={`Slide ${index + 1}`}
-                  className="w-full sm:h-[450px] md:h-[600px] object-contain"
+                  className="w-full sm:h-[450px] md:h-[600px] object-cover"
                 />
               </div>
             ))}

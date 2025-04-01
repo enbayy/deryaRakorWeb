@@ -11,7 +11,7 @@ const ContactHome = () => {
       </h2>
 
       <div className="flex flex-col md:flex-col lg:flex-row items-start gap-8">
-        <div className="space-y-4 w-full lg:w-1/2">
+        <div className="space-y-1 w-full lg:w-1/2">
           <p className="text-lg font-sans">
             <span className="font-semibold text-gray-900 dark:text-white">{t("Address")}:</span> Fevzi Çakmak Mh. Bayır Özel Org. San. 10670. Sok. No:31 - 31A Karatay- KONYA / TURKIYE
           </p>

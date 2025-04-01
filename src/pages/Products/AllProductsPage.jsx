@@ -13,7 +13,7 @@ import slider6 from "../../assets/slider6.png";
 import { useTranslation } from "react-i18next";
 
 const categories = [
-    { id: 1, title: "HİDROLİK LİFT PARÇALARI", image: foto1 },
+    { id: 1, title: "HİDROLİK SİLİNDİR PARÇALARI", image: foto1 },
     { id: 2, title: "HİDROLİK SİLİNDİRLER", image: foto2 },
     { id: 3, title: "HİDROLİK DEVRE BORULARI", image: foto3 },
     { id: 4, title: "HİDROLİK-PNÖMATİK HORTUM VE BAŞLIKLARI", image: foto4 },
@@ -63,7 +63,7 @@ const UretimPage = () => {
                         >
                             {!imageLoaded[index] && (
                                 <div className="absolute inset-0 flex justify-center items-center bg-gray-200">
-                                    <p className="text-gray-700 font-semibold text-sm">{t("imageLoading")}</p> {/* Dinamik metin */}
+                                    <p className="text-gray-700 font-semibold text-sm">{t("imageLoading")}</p>
                                 </div>
                             )}
                             <img
@@ -73,7 +73,7 @@ const UretimPage = () => {
                                 onLoad={() => setImageLoaded((prev) => ({ ...prev, [index]: true }))}
                             />
                             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <p className="text-white font-semibold text-lg">{t("viewImage")}</p> {/* Dinamik metin */}
+                                <p className="text-white font-semibold text-lg">{t("viewImage")}</p>
                             </div>
                         </div>
                     ))}

@@ -73,7 +73,7 @@ const Contact = () => {
                         </form>
                     </div>
 
-                    <div data-aos="fade-left" className="bg-white dark:bg-black p-8 rounded-lg space-y-6">
+                    <div data-aos="fade-left" className="bg-white dark:bg-black p-8 rounded-lg space-y-1">
                         <h2 className="text-3xl sm:text-4xl font-semibold text-black dark:text-white font-sans">{t("contactInformation")}</h2>
                         <p className="text-lg text-black dark:text-white font-sans"><span className="font-medium">{t("Address")}:</span> Fevzi Çakmak Mh. Bayır Özel Org. San. 10670. Sok. No:31 - 31A Karatay- KONYA / TURKIYE</p>
                         <p className="text-lg text-black dark:text-white font-sans"><span className="font-medium">{t("Phone")}:</span> +90 332 502 09 36</p>

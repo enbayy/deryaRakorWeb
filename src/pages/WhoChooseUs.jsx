@@ -9,11 +9,10 @@ const WhyChooseUs = () => {
 
   const stats = [
     { value: 30, label: "yearsOfExperience", suffix: "+", tr: "Yıllık Deneyim" },
-    { value: 1500, label: "closedProductionArea", suffix: "m²", tr: "Kapalı Üretim Alanı" },
+    { value: 4000, label: "closedProductionArea", suffix: "m²", tr: "Kapalı Üretim Alanı" },
     { value: 100, label: "customerSatisfaction", suffix: "%", tr: "Müşteri Memnuniyeti" },
-    { value: 50, label: "experiencedEmployees", suffix: "+", tr: "Deneyimli Çalışanlar" },
+    { value: 40, label: "experiencedEmployees", suffix: "+", tr: "Deneyimli Çalışanlar" },
   ];
-
 
   const [counts, setCounts] = useState(stats.map(() => 0));
   const sectionRef = useRef(null);

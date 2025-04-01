@@ -50,13 +50,13 @@ const AboutPage = () => {
             </div>
 
             <div className="mt-8 text-center max-w-4xl">
-                <p className="text-lg text-black dark:text-white leading-relaxed font-semibold">
+                <p className="text-xl text-black dark:text-white leading-relaxed font-semibold">
                     Derya Hidrolik, 30 yılı aşkın sektörel bilgi birikimi ve tecrübesiyle hidrolik
                     silindirler, bağlantı elemanları, rakorlar ve borular üretmektedir. Yeni üretim
                     tesisimizde, 5000 m² alan üzerinde 4000 m² kapalı üretim sahamız ve 40 kişilik
                     uzman ekibimizle faaliyet göstermekteyiz.
                 </p>
-                <p className="text-lg text-black dark:text-white leading-relaxed mt-4 font-semibold">
+                <p className="text-xl text-black dark:text-white leading-relaxed mt-4 font-semibold">
                     Ürünlerimizi <a href="/"><strong className="text-[#D22128] hover:underline">Derya Rakor</strong></a> markasıyla Avrupa'nın birçok ülkesine ihraç ediyor,
                     yüksek kalite standartlarımızla sektörde fark yaratıyoruz. Gelecek hedefimiz,
                     yeni teknolojik yatırımlarla katma değeri yüksek ürünler geliştirerek global pazardaki
@@ -65,13 +65,13 @@ const AboutPage = () => {
             </div>
 
             <div className="mt-8 text-center max-w-4xl">
-                <p className="text-lg text-black dark:text-white leading-relaxed">
+                <p className="text-xl text-black dark:text-white leading-relaxed">
                     Derya Hidrolik manufactures hydraulic cylinders, connection components,
                     fittings, and feedpipes with over 30 years of industry experience and knowledge.
                     Our new production facility spans 5,000 m², including 4,000 m² of closed production
                     space, and operates with a team of 40 experts.
                 </p>
-                <p className="text-lg text-black dark:text-white leading-relaxed mt-4">
+                <p className="text-xl text-black dark:text-white leading-relaxed mt-4">
                     We export our products under the <a href="/"><strong className="text-[#D22128] hover:underline">Derya Rakor</strong></a> brand to many countries in
                     Europe, making a difference in the industry with our high-quality standards.
                     Our future goal is to strengthen our position in the global market by developing
