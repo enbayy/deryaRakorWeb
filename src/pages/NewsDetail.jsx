@@ -1,42 +1,59 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const newsDetails = {
-  "teknoloji-haberleri": {
-    title: "Teknoloji Haberleri",
-    images: ["/images/haber1.jpg", "/images/haber2.jpg", "/images/haber3.jpg", "/images/extra-tech.jpg"],
-    content: "Teknoloji dünyasındaki son gelişmeler, yapay zeka, yazılım ve donanım haberleri burada!",
+  "hydraulic-cylinders": {
+    title: "hydraulicCylinders",
+    images: ["/images/hidrolik-silindir1.jpg", "/images/hidrolik-silindir2.jpg", "/images/hidrolik-silindir3.jpg", "/images/hidrolik-silindir4.jpg"],
+    content: "hydraulicCylindersContent",
   },
-  "sağlık-ve-yaşam": {
-    title: "Sağlık ve Yaşam",
-    images: ["/images/haber4.jpg", "/images/haber5.jpg", "/images/haber6.jpg", "/images/extra-health.jpg"],
-    content: "Sağlıklı yaşam için beslenme, egzersiz ve tıbbi gelişmeler hakkında bilgi alın.",
+  "hydraulic-cylinder-parts": {
+    title: "hydraulicCylinderParts",
+    images: ["/images/silindir-parca1.jpg", "/images/silindir-parca2.jpg", "/images/silindir-parca3.jpg", "/images/silindir-parca4.jpg"],
+    content: "hydraulicCylinderPartsContent",
   },
-  "ekonomi-gündemi": {
-    title: "Ekonomi Gündemi",
-    images: ["/images/haber7.jpg", "/images/haber8.jpg", "/images/haber9.jpg", "/images/extra-economy.jpg"],
-    content: "Döviz kurları, borsa analizleri ve finansal gelişmelerin detayları burada.",
+  "hydraulic-pumps": {
+    title: "hydraulicPumps",
+    images: ["/images/hidrolik-pompa1.jpg", "/images/hidrolik-pompa2.jpg", "/images/hidrolik-pompa3.jpg", "/images/hidrolik-pompa4.jpg"],
+    content: "hydraulicPumpsContent",
+  },
+  "hydraulic-valves": {
+    title: "hydraulicValves",
+    images: ["/images/hidrolik-valf1.jpg", "/images/hidrolik-valf2.jpg", "/images/hidrolik-valf3.jpg", "/images/hidrolik-valf4.jpg"],
+    content: "hydraulicValvesContent",
+  },
+  "hydraulic-hoses": {
+    title: "hydraulicHoses",
+    images: ["/images/hidrolik-hortum1.jpg", "/images/hidrolik-hortum2.jpg", "/images/hidrolik-hortum3.jpg", "/images/hidrolik-hortum4.jpg"],
+    content: "hydraulicHosesContent",
+  },
+  "hydraulic-filters": {
+    title: "hydraulicFilters",
+    images: ["/images/hidrolik-filtre1.jpg", "/images/hidrolik-filtre2.jpg", "/images/hidrolik-filtre3.jpg", "/images/hidrolik-filtre4.jpg"],
+    content: "hydraulicFiltersContent",
   },
 };
 
 const NewsDetail = () => {
   const { title } = useParams();
+  const { t } = useTranslation();
   const news = newsDetails[title];
 
   if (!news) {
-    return <div className="text-center text-red-500 text-2xl">Haber bulunamadı!</div>;
+    return <div className="text-center text-red-500 text-2xl">{t("newsNotFound")}</div>;
   }
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold text-center text-gray-800 mb-6">{news.title}</h1>
-      <p className="text-lg text-gray-700 text-center mb-8">{news.content}</p>
+      <h1 className="text-4xl font-bold text-center text-gray-800 mb-6 font-sans">{t(news.title)}</h1>
+      <p className="text-lg text-gray-700 text-center mb-8 font-poppins">{t(news.content)}</p>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {news.images.map((image, index) => (
           <img
             key={index}
             src={image}
-            alt={`Detay Görsel ${index + 1}`}
+            alt={`${t(news.title)} - ${index + 1}`}
             className="w-full h-48 object-cover rounded-lg shadow-md transform transition hover:scale-105"
           />
         ))}

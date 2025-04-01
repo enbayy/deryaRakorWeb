@@ -111,7 +111,7 @@ const App = () => {
                     <Route path="/urunlerimiz" element={<AllProducts />} />
                     <Route path="/haberler" element={<News />} />
                     <Route path="/e-satis" element={<ESales />} />
-                    <Route path="/news/:title" element={<NewsDetail />} />
+                    <Route path="/haberler/:title" element={<NewsDetail />} />
                 </Routes>
             </Suspense>
             <Footer />
