@@ -37,7 +37,7 @@ const AboutPage = () => {
             <div className="w-full max-w-6xl relative mt-8">
                 {!videoLoaded && (
                     <p className="absolute inset-0 flex justify-center items-center bg-gray-200 text-gray-700 font-semibold text-lg">
-                        Video yükleniyor...
+                        {t("videoLoading")}
                     </p>
                 )}
                 <video
