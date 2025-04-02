@@ -1,7 +1,6 @@
 import React from "react";
 import { MenuLinks } from "./Navbar";
 import { HiX } from "react-icons/hi";
-import Flag from "react-world-flags";
 import { useTranslation } from "react-i18next";
 
 const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
@@ -39,13 +38,13 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
           className={`cursor-pointer ${i18n.language === "tr" ? "opacity-100 scale-110" : "opacity-40"}`}
           onClick={() => handleLanguageChange("tr")}
         >
-          <Flag code="TR" alt="Türk Bayrağı" className="w-12 h-12 border-2 border-white rounded-full p-1" />
+          <img src="https://flagcdn.com/w80/tr.png" alt="Türk Bayrağı" className="w-9 h-9 border-2 border-white rounded-full" />
         </div>
         <div
           className={`cursor-pointer ${i18n.language === "en" ? "opacity-100 scale-110" : "opacity-40"}`}
           onClick={() => handleLanguageChange("en")}
         >
-          <Flag code="GB" alt="İngiltere Bayrağı" className="w-12 h-12 border-2 border-white rounded-full p-1" />
+          <img src="https://flagcdn.com/w80/gb.png" alt="İngiltere Bayrağı" className="w-9 h-9 border-2 border-white rounded-full" />
         </div>
       </div>
     </div>
