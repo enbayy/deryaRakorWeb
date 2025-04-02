@@ -39,7 +39,7 @@ const UretimPage = () => {
     return (
         <div className="container w-full min-h-screen bg-white dark:bg-black flex flex-col items-center">
             <div className="w-full px-4 py-12">
-                <h2 className="text-4xl font-semibold text-center mb-10 text-black dark:text-white font-sans tracking-wide">
+                <h2 className="text-3xl font-semibold text-center mb-10 text-black dark:text-white font-sans tracking-wide">
                     {t("productCategories")}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -52,7 +52,7 @@ const UretimPage = () => {
                             <div className="w-full h-56 flex justify-center items-center overflow-hidden rounded-lg">
                                 <img src={category.image} alt={category.title} className="w-full h-full object-contain" />
                             </div>
-                            <h3 className="mt-6 text-xl font-bold text-center text-black dark:text-white uppercase">
+                            <h3 className="mt-6 text-lg font-bold text-center text-black dark:text-white uppercase font-sans">
                                 {t(category.title)}
                             </h3>
                         </Link>
@@ -61,7 +61,7 @@ const UretimPage = () => {
             </div>
 
             <div className="container w-full px-4 py-12">
-                <h2 className="text-4xl font-extrabold text-center mb-10 text-black dark:text-white uppercase tracking-wide">
+                <h2 className="text-3xl font-extrabold text-center mb-10 text-black dark:text-white uppercase tracking-wide">
                     {t("productionImages")}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

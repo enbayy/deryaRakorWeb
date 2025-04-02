@@ -16,10 +16,10 @@ const AboutSection = () => {
             <Link to="/" className="bg-white rounded-full inline-block">
               <img src={logo} alt="Derya Rakor Logo" className="w-60 h-auto" />
             </Link>
-            <p data-aos="fade-up" className="text-lg leading-8 tracking-wide text-black dark:text-white font-poppins">
+            <p data-aos="fade-up" className="text-base leading-8 tracking-wide text-black dark:text-white font-poppins">
               {t("aboutDescription1")}
             </p>
-            <p data-aos="fade-up" className="text-lg leading-8 tracking-wide text-black dark:text-white font-poppins">
+            <p data-aos="fade-up" className="text-base leading-8 tracking-wide text-black dark:text-white font-poppins">
               {t("aboutDescription2")}
             </p>
 

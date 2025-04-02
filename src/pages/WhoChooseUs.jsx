@@ -53,7 +53,7 @@ const WhyChooseUs = () => {
         <Link to="/" className="bg-white rounded-full">
           <img src={logo} alt="Derya Rakor Logo" className="w-60 h-auto" />
         </Link>
-        <p className="text-black dark:text-white text-lg leading-relaxed font-poppins mt-8">
+        <p className="text-black dark:text-white text-base leading-relaxed font-poppins mt-8">
           {t("whyChooseUsDescription")}
         </p>
       </div>
@@ -61,10 +61,10 @@ const WhyChooseUs = () => {
       <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
         {stats.map((stat, index) => (
           <div key={index} className="bg-white shadow-lg p-8 rounded-2xl transform transition duration-300 hover:scale-105">
-            <h3 className="text-4xl font-bold text-[#D22128] font-sans">
+            <h3 className="text-3xl font-bold text-[#D22128] font-sans">
               {counts[index]}{stat.suffix}
             </h3>
-            <p className="text-gray-800 mt-3 font-medium font-poppins">
+            <p className="text-gray-800 mt-3 text-base font-poppins">
               {t(stat.label)}
             </p>
           </div>
@@ -72,10 +72,10 @@ const WhyChooseUs = () => {
       </div>
 
       <div className="mt-12 max-w-4xl mx-auto text-center">
-        <h3 className="text-3xl font-semibold text-[#D22128] font-sans">
+        <h3 className="text-2xl font-semibold text-[#D22128] font-sans">
           {t("qualityAndReliability")}
         </h3>
-        <p className="text-black dark:text-white mt-5 text-lg leading-relaxed font-poppins">
+        <p className="text-black dark:text-white mt-5 text-base leading-relaxed font-poppins">
           {t("companyDescription")}
         </p>
       </div>

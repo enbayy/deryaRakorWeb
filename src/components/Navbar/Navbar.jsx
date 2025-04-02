@@ -5,6 +5,7 @@ import DarkMode from "./DarkMode";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/deryaLogo.png";
 import { useTranslation } from "react-i18next";
+import Flag from "react-world-flags";
 
 export const MenuLinks = [
   { id: 1, name: "home", link: "/" },
@@ -35,18 +36,18 @@ const Navbar = () => {
         <Link to="/" className="bg-white rounded-full">
           <img src={logo} alt="Derya Rakor Logo" className="h-16" />
         </Link>
-        <nav className="hidden lg:flex items-center gap-12">
+        <nav className="hidden lg-custom:flex items-center gap-12">
           <ul className="flex items-center gap-12">
             {MenuLinks.map(({ id, name, link }) => (
               <li key={id}>
                 <Link
                   to={link}
-                  className={`relative px-4 py-2 inline-block text-lg font-bold font-sans transition-colors duration-300 
-                    ${location.pathname === link
+                  className={`relative px-4 py-2 inline-block text-base font-bold font-sans transition-colors duration-300 
+              ${location.pathname === link
                       ? "text-white font-bold font-sans border-b-2 border-white"
                       : "text-white hover:border-b-2 font-sans"
                     }
-                  `}
+            `}
                 >
                   {t(name)}
                 </Link>
@@ -56,19 +57,19 @@ const Navbar = () => {
         </nav>
         <div className="flex items-center gap-4">
           <div
-            className={`hidden lg:block cursor-pointer ${i18n.language === "tr" ? "opacity-100 scale-110" : "opacity-40"}`}
+            className={`hidden lg-custom:block cursor-pointer ${i18n.language === "tr" ? "opacity-100 scale-110 border-b-2 border-white" : "opacity-50"}`}
             onClick={() => handleLanguageChange("tr")}
           >
-            <img src="https://flagcdn.com/w80/tr.png" alt="Türk Bayrağı" className="w-9 h-9 border-2 border-white rounded-full" />
+            <Flag code="TR" alt="Türk Bayrağı" className="w-10 h-10" />
           </div>
           <div
-            className={`hidden lg:block cursor-pointer ${i18n.language === "en" ? "opacity-100 scale-110" : "opacity-40"}`}
+            className={`hidden lg-custom:block cursor-pointer ${i18n.language === "en" ? "opacity-100 scale-110 border-b-2 border-white" : "opacity-50"}`}
             onClick={() => handleLanguageChange("en")}
           >
-            <img src="https://flagcdn.com/w80/gb.png" alt="İngiltere Bayrağı" className="w-9 h-9 border-2 border-white rounded-full" />
+            <Flag code="GB" alt="İngiltere Bayrağı" className="w-10 h-10" />
           </div>
           <DarkMode />
-          <div className="lg:hidden">
+          <div className="lg-custom:hidden">
             {showMenu ? (
               <HiMenuAlt1 onClick={toggleMenu} className="cursor-pointer text-white" size={30} />
             ) : (

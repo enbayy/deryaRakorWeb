@@ -44,11 +44,11 @@ const CategoryDetail = () => {
     return (
         <div className="w-full min-h-screen flex flex-col items-center bg-white">
             <div className="max-w-4xl w-full px-4 py-10">
-                <h2 className="text-3xl font-bold text-center mb-6 text-gray-800 uppercase font-sans">
+                <h2 className="text-2xl font-bold text-center mb-6 text-gray-800 uppercase font-sans">
                     {t(category.title)}
                 </h2>
 
-                <p className="text-lg text-gray-700 mt-4 text-center font-poppins">{t("desc")}</p>
+                <p className="text-base text-gray-700 mt-4 text-center font-poppins">{t("desc")}</p>
 
                 {category.products.length > 0 && (
                     <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -19,7 +19,7 @@ const ProductsPage = () => {
     return (
         <div className="container w-full bg-white dark:bg-black flex flex-col items-center">
             <div className=" w-full px-4 py-12">
-                <h2 data-aos="fade-left" className="text-4xl font-semibold text-center mb-10 text-black dark:text-white font-sans tracking-wide">
+                <h2 data-aos="fade-left" className="text-3xl font-semibold text-center mb-10 text-black dark:text-white font-sans tracking-wide">
                     {t("productCategories")}
                 </h2>
                 <div data-aos="fade-right" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -32,7 +32,7 @@ const ProductsPage = () => {
                             <div className="w-full h-56 flex justify-center items-center overflow-hidden rounded-lg">
                                 <img src={category.image} alt={category.title} className="w-full h-full object-contain" />
                             </div>
-                            <h3 className="mt-6 text-xl font-bold text-center text-black dark:text-white uppercase">
+                            <h3 className="mt-6 text-lg font-bold text-center text-black dark:text-white uppercase font-sans">
                                 {t(category.title)}
                             </h3>
                         </Link>

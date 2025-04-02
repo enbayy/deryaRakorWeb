@@ -24,6 +24,9 @@ export default {
           sm: "3rem",
         },
       },
+      screens: {
+        'lg-custom': '1283px',
+      },
     },
   },
   plugins: [],

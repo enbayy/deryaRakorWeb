@@ -34,7 +34,7 @@ const Hero = () => {
     <div className="mx-auto flex flex-col justify-center items-center py-10 relative">
       <div className="text-center mb-10">
         {[text, text2].map((line, idx) => (
-          <p key={idx} className="text-5xl md:text-7xl font-semibold text-[#D22128] font-stainy flex justify-center">
+          <p key={idx} className="text-4xl md:text-6xl font-semibold text-[#D22128] font-stainy flex justify-center">
             {line.split("").map((char, index) => (
               <motion.span
                 key={index}
