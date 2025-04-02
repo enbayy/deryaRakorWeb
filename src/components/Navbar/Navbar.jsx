@@ -4,7 +4,6 @@ import ResponsiveMenu from "./ResponsiveMenu";
 import DarkMode from "./DarkMode";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/deryaLogo.png";
-import Flag from "react-world-flags";
 import { useTranslation } from "react-i18next";
 
 export const MenuLinks = [
@@ -60,13 +59,13 @@ const Navbar = () => {
             className={`hidden lg:block cursor-pointer ${i18n.language === "tr" ? "opacity-100 scale-110" : "opacity-40"}`}
             onClick={() => handleLanguageChange("tr")}
           >
-            <Flag code="TR" alt="Türk Bayrağı" className="w-12 h-12 border-2 border-white rounded-full p-1" />
+            <img src="https://flagcdn.com/w80/tr.png" alt="Türk Bayrağı" className="w-9 h-9 border-2 border-white rounded-full" />
           </div>
           <div
             className={`hidden lg:block cursor-pointer ${i18n.language === "en" ? "opacity-100 scale-110" : "opacity-40"}`}
             onClick={() => handleLanguageChange("en")}
           >
-            <Flag code="GB" alt="İngiltere Bayrağı" className="w-12 h-12 border-2 border-white rounded-full p-1" />
+            <img src="https://flagcdn.com/w80/gb.png" alt="İngiltere Bayrağı" className="w-9 h-9 border-2 border-white rounded-full" />
           </div>
           <DarkMode />
           <div className="lg:hidden">
