@@ -2,6 +2,7 @@ import React from "react";
 import { MenuLinks } from "./Navbar";
 import { HiX } from "react-icons/hi";
 import { useTranslation } from "react-i18next";
+import Flag from "react-world-flags";
 
 const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
   const { i18n, t } = useTranslation();
@@ -35,16 +36,16 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
       </div>
       <div className="pb-6 flex justify-center gap-4">
         <div
-          className={`cursor-pointer ${i18n.language === "tr" ? "opacity-100 scale-110" : "opacity-40"}`}
+          className={`cursor-pointer ${i18n.language === "tr" ? "opacity-100 scale-110 border-b-2 border-white" : "opacity-50"}`}
           onClick={() => handleLanguageChange("tr")}
         >
-          <img src="https://flagcdn.com/w80/tr.png" alt="Türk Bayrağı" className="w-9 h-9 border-2 border-white rounded-full" />
+          <Flag code="TR" alt="Türk Bayrağı" className="w-10 h-10" />
         </div>
         <div
-          className={`cursor-pointer ${i18n.language === "en" ? "opacity-100 scale-110" : "opacity-40"}`}
+          className={`cursor-pointer ${i18n.language === "en" ? "opacity-100 scale-110 border-b-2 border-white" : "opacity-50"}`}
           onClick={() => handleLanguageChange("en")}
         >
-          <img src="https://flagcdn.com/w80/gb.png" alt="İngiltere Bayrağı" className="w-9 h-9 border-2 border-white rounded-full" />
+          <Flag code="GB" alt="İngiltere Bayrağı" className="w-10 h-10" />
         </div>
       </div>
     </div>
