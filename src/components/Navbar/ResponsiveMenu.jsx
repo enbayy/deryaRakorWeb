@@ -14,8 +14,7 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
 
   return (
     <div
-      className={`fixed top-0 bottom-0 z-20 h-screen w-[75%] bg-white dark:bg-black 
-      dark:text-white text-black px-8 pb-6 pt-16 shadow-md rounded-r-xl 
+      className={`fixed top-0 bottom-0 z-20 h-screen w-[75%] bg-[#D22128] text-white px-8 pb-6 pt-16 shadow-md rounded-r-xl 
       transition-all duration-300 flex flex-col justify-between ${showMenu ? "left-0" : "-left-full"}`}
     >
       <div>
@@ -37,16 +36,16 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
       </div>
       <div className="pb-6 flex justify-center gap-4">
         <div
-          className={`cursor-pointer ${i18n.language === "tr" ? "opacity-100 scale-110 border-b border-black dark:border-white" : "opacity-50"}`}
+          className={`cursor-pointer ${i18n.language === "tr" ? "opacity-100 scale-110" : "opacity-40"}`}
           onClick={() => handleLanguageChange("tr")}
         >
-          <Flag code="TR" alt="Türk Bayrağı" className="w-8 h-8" />
+          <Flag code="TR" alt="Türk Bayrağı" className="w-12 h-12 border-2 border-white rounded-full p-1" />
         </div>
         <div
-          className={`cursor-pointer ${i18n.language === "en" ? "opacity-100 scale-110 border-b border-black dark:border-white" : "opacity-50"}`}
+          className={`cursor-pointer ${i18n.language === "en" ? "opacity-100 scale-110" : "opacity-40"}`}
           onClick={() => handleLanguageChange("en")}
         >
-          <Flag code="GB" alt="İngiltere Bayrağı" className="w-8 h-8" />
+          <Flag code="GB" alt="İngiltere Bayrağı" className="w-12 h-12 border-2 border-white rounded-full p-1" />
         </div>
       </div>
     </div>

@@ -26,15 +26,15 @@ const CookieBanner = () => {
                 </a>{" "}
                 {t("cookieText")}
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mt-2">
                 <button
-                    className="bg-green-500/50 hover:bg-green-600 text-white px-4 py-2 text-base font-semibold rounded"
+                    className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 text-base font-semibold rounded"
                     onClick={handleAccept}
                 >
                     {t("accept")}
                 </button>
                 <button
-                    className="bg-red-500/50 hover:bg-red-600 text-white px-4 py-2 text-base font-semibold rounded"
+                    className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 text-base font-semibold rounded"
                     onClick={handleReject}
                 >
                     {t("reject")}
