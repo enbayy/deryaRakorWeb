@@ -74,7 +74,8 @@ const resources = {
             "hydraulicHoses": "Hydraulic Hoses",
             "hydraulicHosesContent": "Hydraulic hoses ensure the safe transport of fluids.",
             "hydraulicFilters": "Hydraulic Filters",
-            "hydraulicFiltersContent": "Hydraulic filters remove contaminants from the system, extending the lifespan of components."
+            "hydraulicFiltersContent": "Hydraulic filters remove contaminants from the system, extending the lifespan of components.",
+            "viewImage": "View Image"
         }
     },
     tr: {
@@ -149,7 +150,8 @@ const resources = {
             "hydraulicHoses": "Hidrolik Hortumlar",
             "hydraulicHosesContent": "Hidrolik hortumlar, akışkanların güvenli bir şekilde taşınmasını sağlar.",
             "hydraulicFilters": "Hidrolik Filtreler",
-            "hydraulicFiltersContent": "Hidrolik filtreler, sistemdeki kirleticileri temizleyerek bileşenlerin ömrünü uzatır."
+            "hydraulicFiltersContent": "Hidrolik filtreler, sistemdeki kirleticileri temizleyerek bileşenlerin ömrünü uzatır.",
+            "viewImage": "Görseli İncele",
         }
     }
 };

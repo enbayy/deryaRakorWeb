@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import foto1 from "../../assets/hidrolikLiftParca.png";
-import foto2 from "../../assets/hidrolikSilindir.png";
-import foto3 from "../../assets/hidrolikDevreBoruları.png";
-import foto4 from "../../assets/hortumBasliklari.png";
+import foto1 from "../../assets/hidrolikSilindirParcalari.png";
+import foto2 from "../../assets/hidrolikSilindir4.png";
+import foto3 from "../../assets/hidrolikDevreBorulari.jpg";
+import foto4 from "../../assets/hidrolikPnomatikHortumVeBasliklari.png";
 import { useTranslation } from "react-i18next";
 
 const categories = [
@@ -27,7 +27,7 @@ const ProductsPage = () => {
                         <Link
                             key={category.id}
                             to={`/urunlerimiz/${encodeURIComponent(category.title.toLowerCase().replace(/\s+/g, "-"))}`}
-                            className="flex flex-col items-center bg-white dark:bg-black shadow-xl rounded-2xl p-6 border border-gray-300 transition-transform transform hover:scale-105 hover:shadow-2xl"
+                            className="flex flex-col items-center bg-white dark:bg-black rounded-2xl py-4 border border-gray-300 transition-transform transform hover:scale-105 hover:shadow-2xl"
                         >
                             <div className="w-full h-56 flex justify-center items-center overflow-hidden rounded-lg">
                                 <img src={category.image} alt={category.title} className="w-full h-full object-contain" />

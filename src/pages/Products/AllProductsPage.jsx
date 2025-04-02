@@ -1,15 +1,25 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import foto1 from "../../assets/hidrolikLiftParca.png";
-import foto2 from "../../assets/hidrolikSilindir.png";
-import foto3 from "../../assets/hidrolikDevreBoruları.png";
-import foto4 from "../../assets/hortumBasliklari.png";
-import slider1 from "../../assets/slider1.png";
-import slider2 from "../../assets/slider2.png";
-import slider3 from "../../assets/slider3.png";
-import slider4 from "../../assets/slider4.png";
-import slider5 from "../../assets/slider5.png";
-import slider6 from "../../assets/slider6.png";
+import foto1 from "../../assets/hidrolikSilindirParcalari.png";
+import foto2 from "../../assets/hidrolikSilindir4.png";
+import foto3 from "../../assets/hidrolikDevreBorulari.jpg";
+import foto4 from "../../assets/hidrolikPnomatikHortumVeBasliklari.png";
+import slider1 from "../../assets/uretim1.jpg";
+import slider2 from "../../assets/uretim2.jpg";
+import slider3 from "../../assets/uretim3.jpg";
+import slider4 from "../../assets/uretim4.jpg";
+import slider5 from "../../assets/uretim5.jpg";
+import slider6 from "../../assets/uretim6.jpg";
+import slider7 from "../../assets/uretim7.jpg";
+import slider8 from "../../assets/uretim8.jpg";
+import slider9 from "../../assets/uretim9.jpg";
+import slider10 from "../../assets/uretim10.jpg";
+import slider11 from "../../assets/uretim11.jpg";
+import slider12 from "../../assets/uretim12.jpg";
+import slider13 from "../../assets/uretim13.jpg";
+import slider14 from "../../assets/uretim14.jpg";
+import slider15 from "../../assets/uretim15.jpg";
+import slider16 from "../../assets/uretim16.jpg";
 import { useTranslation } from "react-i18next";
 
 const categories = [
@@ -19,7 +29,7 @@ const categories = [
     { id: 4, title: "HİDROLİK-PNÖMATİK HORTUM VE BAŞLIKLARI", image: foto4 },
 ];
 
-const galleryImages = [slider1, slider2, slider3, slider4, slider5, slider6];
+const galleryImages = [slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9, slider10, slider11, slider12, slider13, slider14, slider15, slider16];
 
 const UretimPage = () => {
     const { t } = useTranslation();
@@ -37,7 +47,7 @@ const UretimPage = () => {
                         <Link
                             key={category.id}
                             to={`/urunlerimiz/${encodeURIComponent(category.title.toLowerCase().replace(/\s+/g, "-"))}`}
-                            className="flex flex-col items-center bg-white dark:bg-black shadow-xl rounded-2xl p-6 border border-gray-300 transition-transform transform hover:scale-105 hover:shadow-2xl"
+                            className="flex flex-col items-center bg-white dark:bg-black rounded-2xl py-4 border border-gray-300 transition-transform transform hover:scale-105 hover:shadow-2xl"
                         >
                             <div className="w-full h-56 flex justify-center items-center overflow-hidden rounded-lg">
                                 <img src={category.image} alt={category.title} className="w-full h-full object-contain" />

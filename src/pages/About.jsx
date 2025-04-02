@@ -93,7 +93,7 @@ const AboutPage = () => {
                             className="w-full h-full object-contain rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                            <p className="text-white font-semibold text-lg">Görseli İncele</p>
+                            <p className="text-white font-semibold text-lg">{t("viewImage")}</p>
                         </div>
                     </div>
                 ))}

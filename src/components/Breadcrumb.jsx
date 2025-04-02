@@ -21,7 +21,7 @@ const Breadcrumb = () => {
                     return (
                         <li key={to} className="flex items-center">
                             <span className="mx-2">/</span>
-                            <Link to={to} className="hover:underline capitalize">
+                            <Link to={to} className="hover:underline capitalize font-sans">
                                 {t(decodeURIComponent(value))}
                             </Link>
                         </li>

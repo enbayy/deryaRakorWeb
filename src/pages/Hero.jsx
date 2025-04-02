@@ -3,9 +3,11 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import slider1 from "../assets/sliderr1.jpg";
-import slider2 from "../assets/slider7.png";
-import slider3 from "../assets/slider8.png";
+import slider1 from "../assets/hero1.png";
+import slider2 from "../assets/hero2.jpg";
+import slider3 from "../assets/hero3.jpg";
+import slider4 from "../assets/hero4.jpg";
+import slider5 from "../assets/hero5.jpg";
 
 const Hero = () => {
   const settings = {
@@ -25,7 +27,7 @@ const Hero = () => {
   const text2 = "Directs Your Power";
 
   const sliderImages = [
-    slider1, slider2, slider3
+    slider1, slider2, slider3, slider4, slider5
   ];
 
   return (
@@ -52,12 +54,14 @@ const Hero = () => {
         <div className="relative overflow-hidden">
           <Slider {...settings}>
             {sliderImages.map((img, index) => (
-              <div key={index} className="flex justify-center items-center">
-                <img
-                  src={img}
-                  alt={`Slide ${index + 1}`}
-                  className="w-full sm:h-[450px] md:h-[600px] object-cover"
-                />
+              <div key={index} className="flex justify-center items-center w-full">
+                <div className="w-full aspect-[16/9]">
+                  <img
+                    src={img}
+                    alt={`Slide ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             ))}
           </Slider>
