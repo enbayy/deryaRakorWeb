@@ -31,17 +31,17 @@ const Navbar = () => {
 
   return (
     <header className="relative bg-[#D22128] text-white z-50">
-      <div className="container flex justify-between items-center py-2 w-full max-w-[1440px] mx-auto px-4 lg:px-8">
+      <div className="container flex justify-between items-center py-2">
         <Link to="/" className="bg-white rounded-full flex-shrink-0">
-          <img src={logo} alt="Derya Rakor Logo" className="w-16 h-16 max-w-16 max-h-16" />
+          <img src={logo} alt="Derya Rakor Logo" className="h-16 max-h-16 md:h-14 sm:h-12 transition-all duration-300" />
         </Link>
-        <nav className="hidden lg:flex items-center gap-12">
-          <ul className="flex items-center gap-12">
+        <nav className="hidden lg:flex items-center gap-10 md:gap-6 sm:gap-4 transition-all duration-300">
+          <ul className="flex items-center gap-10 md:gap-6 sm:gap-4">
             {MenuLinks.map(({ id, name, link }) => (
               <li key={id}>
                 <Link
                   to={link}
-                  className={`relative px-4 py-2 inline-block text-lg font-bold transition-colors duration-300 
+                  className={`relative px-3 py-2 inline-block text-lg font-bold font-sans transition-colors duration-300 
                   ${location.pathname === link
                       ? "text-white border-b-2 border-white"
                       : "text-white hover:border-b-2"
@@ -55,24 +55,26 @@ const Navbar = () => {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-4 flex-shrink-0">
+        <div className="flex items-center gap-4 md:gap-3 sm:gap-2 transition-all duration-300">
           <div
-            className={`hidden lg:block cursor-pointer flex-shrink-0 ${i18n.language === "tr" ? "opacity-100 scale-110" : "opacity-40"}`}
+            className={`hidden lg:block cursor-pointer flex-shrink-0 transform transition-all duration-300 ${i18n.language === "tr" ? "opacity-100 scale-100" : "opacity-40 scale-90"
+              }`}
             onClick={() => handleLanguageChange("tr")}
           >
             <img src="https://flagcdn.com/w80/tr.png" alt="Türk Bayrağı"
-              className="w-9 h-9 max-w-9 max-h-9 border-2 border-white rounded-full" />
+              className="w-9 h-9 md:w-8 md:h-8 sm:w-7 sm:h-7 max-w-9 max-h-9 border-2 border-white rounded-full" />
           </div>
 
           <div
-            className={`hidden lg:block cursor-pointer flex-shrink-0 ${i18n.language === "en" ? "opacity-100 scale-110" : "opacity-40"}`}
+            className={`hidden lg:block cursor-pointer flex-shrink-0 transform transition-all duration-300 ${i18n.language === "en" ? "opacity-100 scale-100" : "opacity-40 scale-90"
+              }`}
             onClick={() => handleLanguageChange("en")}
           >
             <img src="https://flagcdn.com/w80/gb.png" alt="İngiltere Bayrağı"
-              className="w-9 h-9 max-w-9 max-h-9 border-2 border-white rounded-full" />
+              className="w-9 h-9 md:w-8 md:h-8 sm:w-7 sm:h-7 max-w-9 max-h-9 border-2 border-white rounded-full" />
           </div>
 
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 transform transition-all duration-300 md:scale-90 sm:scale-75">
             <DarkMode />
           </div>
 
@@ -85,7 +87,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       <ResponsiveMenu showMenu={showMenu} toggleMenu={toggleMenu} />
     </header>
   );
