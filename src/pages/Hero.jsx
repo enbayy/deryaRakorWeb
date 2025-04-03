@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import slider1 from "../assets/hero1.png";
+import slider2 from "../assets/uretim7.jpg";
 import slider4 from "../assets/hero4.jpg";
 import slider5 from "../assets/hero5.jpg";
 
@@ -25,7 +26,7 @@ const Hero = () => {
   const text2 = "Directs Your Power";
 
   const sliderImages = [
-    slider1, slider4, slider5
+    slider1, slider2, slider4, slider5
   ];
 
   return (

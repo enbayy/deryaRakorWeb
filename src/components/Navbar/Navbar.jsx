@@ -54,7 +54,6 @@ const Navbar = () => {
             ))}
           </ul>
         </nav>
-
         <div className="flex items-center gap-4 md:gap-3 sm:gap-2 transition-all duration-300">
           <div
             className={`hidden lg:block cursor-pointer flex-shrink-0 transform transition-all duration-300 ${i18n.language === "tr" ? "opacity-100 scale-100" : "opacity-40 scale-90"
@@ -64,7 +63,6 @@ const Navbar = () => {
             <img src="https://flagcdn.com/w80/tr.png" alt="Türk Bayrağı"
               className="w-9 h-9 md:w-8 md:h-8 sm:w-7 sm:h-7 max-w-9 max-h-9 border-2 border-white rounded-full" />
           </div>
-
           <div
             className={`hidden lg:block cursor-pointer flex-shrink-0 transform transition-all duration-300 ${i18n.language === "en" ? "opacity-100 scale-100" : "opacity-40 scale-90"
               }`}
@@ -73,11 +71,9 @@ const Navbar = () => {
             <img src="https://flagcdn.com/w80/gb.png" alt="İngiltere Bayrağı"
               className="w-9 h-9 md:w-8 md:h-8 sm:w-7 sm:h-7 max-w-9 max-h-9 border-2 border-white rounded-full" />
           </div>
-
           <div className="flex-shrink-0 transform transition-all duration-300 md:scale-90 sm:scale-75">
             <DarkMode />
           </div>
-
           <div className="lg:hidden">
             {showMenu ? (
               <HiMenuAlt1 onClick={toggleMenu} className="cursor-pointer text-white" size={30} />
