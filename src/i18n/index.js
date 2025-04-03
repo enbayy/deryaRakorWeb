@@ -77,7 +77,8 @@ const resources = {
             "hydraulicFiltersContent": "Hydraulic filters remove contaminants from the system, extending the lifespan of components.",
             "viewImage": "View Image",
             "imageLoading": "Image Loading",
-            "videoLoading": "Video Loading"
+            "videoLoading": "Video Loading",
+            "productionImages": "PRODUCTION IMAGES"
         }
     },
     tr: {
@@ -155,7 +156,8 @@ const resources = {
             "hydraulicFiltersContent": "Hidrolik filtreler, sistemdeki kirleticileri temizleyerek bileşenlerin ömrünü uzatır.",
             "viewImage": "Görseli İncele",
             "imageLoading": "Resim Yükleniyor",
-            "videoLoading": "Video Yükleniyor"
+            "videoLoading": "Video Yükleniyor",
+            "productionImages": "ÜRETİM GÖRÜNTÜLERİ"
         }
     }
 };

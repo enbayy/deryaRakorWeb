@@ -4,6 +4,8 @@ import foto1 from "../../assets/hidrolikSilindirParcalari.png";
 import foto2 from "../../assets/hidrolikSilindir4.png";
 import foto3 from "../../assets/hidrolikDevreBorulari.jpg";
 import foto4 from "../../assets/hidrolikPnomatikHortumVeBasliklari.png";
+import slider01 from "../../assets/hero2.jpg";
+import slider0 from "../../assets/hero3.jpg";
 import slider1 from "../../assets/uretim1.jpg";
 import slider2 from "../../assets/uretim2.jpg";
 import slider3 from "../../assets/uretim3.jpg";
@@ -29,7 +31,7 @@ const categories = [
     { id: 4, title: "HİDROLİK-PNÖMATİK HORTUM VE BAŞLIKLARI", image: foto4 },
 ];
 
-const galleryImages = [slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9, slider10, slider11, slider12, slider13, slider14, slider15, slider16];
+const galleryImages = [slider01, slider0, slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9, slider10, slider11, slider12, slider13, slider14, slider15, slider16];
 
 const UretimPage = () => {
     const { t } = useTranslation();
@@ -61,7 +63,7 @@ const UretimPage = () => {
             </div>
 
             <div className="container w-full px-4 py-12">
-                <h2 className="text-3xl font-extrabold text-center mb-10 text-black dark:text-white uppercase tracking-wide">
+                <h2 className="text-3xl font-semibold text-center mb-10 text-black dark:text-white font-sans tracking-wide">
                     {t("productionImages")}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
