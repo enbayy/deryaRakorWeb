@@ -22,6 +22,12 @@ import slider13 from "../../assets/uretim13.jpg";
 import slider14 from "../../assets/uretim14.jpg";
 import slider15 from "../../assets/uretim15.jpg";
 import slider16 from "../../assets/uretim16.jpg";
+import slider17 from "../../assets/slider1.png";
+import slider18 from "../../assets/slider2.png";
+import slider19 from "../../assets/slider3.png";
+import slider20 from "../../assets/slider4.png";
+import slider21 from "../../assets/slider5.png";
+import slider22 from "../../assets/slider6.png";
 import { useTranslation } from "react-i18next";
 
 const categories = [
@@ -31,7 +37,7 @@ const categories = [
     { id: 4, title: "HİDROLİK-PNÖMATİK HORTUM VE BAŞLIKLARI", image: foto4 },
 ];
 
-const galleryImages = [slider01, slider0, slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9, slider10, slider11, slider12, slider13, slider14, slider15, slider16];
+const galleryImages = [slider17, slider18, slider19, slider20, slider21, slider22, slider01, slider0, slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9, slider10, slider11, slider12, slider13, slider14, slider15, slider16];
 
 const UretimPage = () => {
     const { t } = useTranslation();

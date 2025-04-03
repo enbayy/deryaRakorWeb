@@ -20,7 +20,7 @@ const resources = {
             "HİDROLİK SİLİNDİRLER": "Hydraulic Cylinders",
             "HİDROLİK DEVRE BORULARI": "Hydraulic Feed Pipes",
             "HİDROLİK-PNÖMATİK HORTUM VE BAŞLIKLARI": "Hydraulic-Pneumatic Hoses and Fittings",
-            "footer_info": "Derya Hydraulic Rakor Rakor Machine Industry Trade Ltd. Co. © 2025",
+            "footer_info": "Derya Hydraulic Rakor Machine Industry Trade Ltd. Co. © 2025",
             "whyChooseUsDescription": "We make a difference in the sector with our over 30 years of experience, high quality standards and the importance we give to customer satisfaction.",
             "qualityAndReliability": "The Point Of Quailty and Trust",
             "companyDescription": "As Derya Hidrolik, we work to meet customer needs in the best way possible, with the aim of becoming a reliable brand in the hydraulic fittings sector.",
