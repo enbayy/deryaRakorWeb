@@ -14,6 +14,8 @@ import News from "./pages/News";
 import ESales from "./pages/eSales";
 import CookieBanner from "./pages/CookieBanner";
 import NewsDetail from "./pages/NewsDetail";
+import PopupMenu from "./components/PopupMenu";
+import imageSrc from "./assets/popup.jpg"
 
 const Hero = lazy(() => import("./pages/Hero"));
 const About = lazy(() => import("./pages/About"));
@@ -43,6 +45,7 @@ const Loading = () => (
 const App = () => {
     const [showSocialIcons, setShowSocialIcons] = useState(true);
     const [scrollPercentage, setScrollPercentage] = useState(0);
+    const [showPopup, setShowPopup] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -81,6 +84,8 @@ const App = () => {
                     style={{ width: `${scrollPercentage}%` }}
                 />
             </div>
+
+            {showPopup && <PopupMenu imageSrc={imageSrc} />}
 
             <Suspense fallback={<Loading />}>
                 <Routes>
