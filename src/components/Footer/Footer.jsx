@@ -35,7 +35,7 @@ const Footer = () => {
                         <h4 className="text-base font-semibold text-white dark:text-white mb-4 font-sans">
                             {t("products")}
                         </h4>
-                        <ul className="space-y-2">
+                        <ul className="space-y-2 flex flex-col items-center md:items-start">
                             <li>
                                 <a href="/urunlerimiz/hi̇droli̇k-si̇li̇ndi̇rler" className="text-sm text-white dark:text-white font-sans hover:underline transition-colors font-semibold">
                                     {t("HİDROLİK SİLİNDİRLER")}
