@@ -5,7 +5,6 @@ import DarkMode from "./DarkMode";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/deryaLogo.png";
 import { useTranslation } from "react-i18next";
-import Flag from "react-world-flags";
 
 export const MenuLinks = [
   { id: 1, name: "home", link: "/" },
@@ -32,22 +31,22 @@ const Navbar = () => {
 
   return (
     <header className="relative bg-[#D22128] text-white z-50">
-      <div className="container flex justify-between items-center py-2">
-        <Link to="/" className="bg-white rounded-full">
-          <img src={logo} alt="Derya Rakor Logo" className="h-16" />
+      <div className="container flex justify-between items-center py-2 w-full max-w-[1440px] mx-auto px-4 lg:px-8">
+        <Link to="/" className="bg-white rounded-full flex-shrink-0">
+          <img src={logo} alt="Derya Rakor Logo" className="w-16 h-16 max-w-16 max-h-16" />
         </Link>
-        <nav className="hidden lg-custom:flex items-center gap-12">
+        <nav className="hidden lg:flex items-center gap-12">
           <ul className="flex items-center gap-12">
             {MenuLinks.map(({ id, name, link }) => (
               <li key={id}>
                 <Link
                   to={link}
-                  className={`relative px-4 py-2 inline-block text-base font-bold font-sans transition-colors duration-300 
-              ${location.pathname === link
-                      ? "text-white font-bold font-sans border-b-2 border-white"
-                      : "text-white hover:border-b-2 font-sans"
+                  className={`relative px-4 py-2 inline-block text-lg font-bold transition-colors duration-300 
+                  ${location.pathname === link
+                      ? "text-white border-b-2 border-white"
+                      : "text-white hover:border-b-2"
                     }
-            `}
+                `}
                 >
                   {t(name)}
                 </Link>
@@ -55,21 +54,29 @@ const Navbar = () => {
             ))}
           </ul>
         </nav>
-        <div className="flex items-center gap-4">
+
+        <div className="flex items-center gap-4 flex-shrink-0">
           <div
-            className={`hidden lg-custom:block cursor-pointer ${i18n.language === "tr" ? "opacity-100 scale-110 border-b-2 border-white" : "opacity-50"}`}
+            className={`hidden lg:block cursor-pointer flex-shrink-0 ${i18n.language === "tr" ? "opacity-100 scale-110" : "opacity-40"}`}
             onClick={() => handleLanguageChange("tr")}
           >
-            <Flag code="TR" alt="Türk Bayrağı" className="w-10 h-10" />
+            <img src="https://flagcdn.com/w80/tr.png" alt="Türk Bayrağı"
+              className="w-9 h-9 max-w-9 max-h-9 border-2 border-white rounded-full" />
           </div>
+
           <div
-            className={`hidden lg-custom:block cursor-pointer ${i18n.language === "en" ? "opacity-100 scale-110 border-b-2 border-white" : "opacity-50"}`}
+            className={`hidden lg:block cursor-pointer flex-shrink-0 ${i18n.language === "en" ? "opacity-100 scale-110" : "opacity-40"}`}
             onClick={() => handleLanguageChange("en")}
           >
-            <Flag code="GB" alt="İngiltere Bayrağı" className="w-10 h-10" />
+            <img src="https://flagcdn.com/w80/gb.png" alt="İngiltere Bayrağı"
+              className="w-9 h-9 max-w-9 max-h-9 border-2 border-white rounded-full" />
           </div>
-          <DarkMode />
-          <div className="lg-custom:hidden">
+
+          <div className="flex-shrink-0">
+            <DarkMode />
+          </div>
+
+          <div className="lg:hidden">
             {showMenu ? (
               <HiMenuAlt1 onClick={toggleMenu} className="cursor-pointer text-white" size={30} />
             ) : (
@@ -78,6 +85,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
       <ResponsiveMenu showMenu={showMenu} toggleMenu={toggleMenu} />
     </header>
   );
