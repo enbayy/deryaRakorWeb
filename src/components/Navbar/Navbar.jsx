@@ -41,7 +41,7 @@ const Navbar = () => {
               <li key={id}>
                 <Link
                   to={link}
-                  className={`relative px-3 py-2 inline-block text-base font-bold font-sans transition-colors duration-300 
+                  className={`relative px-3 py-2 inline-block text-sm font-bold font-sans transition-colors duration-300 
                   ${location.pathname === link
                       ? "text-white border-b-2 border-white"
                       : "text-white hover:border-b-2"
