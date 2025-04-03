@@ -78,7 +78,9 @@ const resources = {
             "viewImage": "View Image",
             "imageLoading": "Image Loading",
             "videoLoading": "Video Loading",
-            "productionImages": "PRODUCTION IMAGES"
+            "productionImages": "PRODUCTION IMAGES",
+            "successMessage": "Your message has been sent successfully!",
+            "failedMessage": "Mesaj gönderilemedi."
         }
     },
     tr: {
@@ -157,7 +159,9 @@ const resources = {
             "viewImage": "Görseli İncele",
             "imageLoading": "Resim Yükleniyor",
             "videoLoading": "Video Yükleniyor",
-            "productionImages": "ÜRETİM GÖRÜNTÜLERİ"
+            "productionImages": "ÜRETİM GÖRÜNTÜLERİ",
+            "successMessage": "Mesajınız başarıyla gönderildi!",
+            "failedMessage": "Mesaj gönderilemedi: {{error}}"
         }
     }
 };

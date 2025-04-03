@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
 import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+    const form = useRef();
     const { t } = useTranslation();
     const [formData, setFormData] = useState({
         name: "",
@@ -14,9 +16,21 @@ const Contact = () => {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
-        alert(t("formSubmitted"));
+
+        emailjs
+            .sendForm('service_ywrwgsm', 'template_6wind9k', form.current, {
+                publicKey: '5AocTj0gORYoA0TyF',
+            })
+            .then(
+                () => {
+                    alert(t("successMessage"));
+                },
+                (error) => {
+                    alert(t("failedMessage", { error: error.text }));
+                },
+            );
     };
 
     return (
@@ -26,7 +40,7 @@ const Contact = () => {
                     <div data-aos="fade-right" className="bg-white dark:bg-black p-8 rounded-lg space-y-6">
                         <h2 className="text-2xl sm:text-3xl font-semibold text-black dark:text-white font-sans">{t("contactUs")}</h2>
                         <p className="text-lg text-gray-600 dark:text-gray-300">{t("contactDescription")}</p>
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form ref={form} onSubmit={sendEmail} className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block mb-2 text-black dark:text-white font-medium font-sans">{t("name")}</label>
                                 <input
