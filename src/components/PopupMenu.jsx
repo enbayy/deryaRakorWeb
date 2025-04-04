@@ -8,8 +8,12 @@ const PopupMenu = ({ imageSrc }) => {
     };
 
     useEffect(() => {
-        setIsVisible(true);
-    }, [window.location.href]);
+        if (!sessionStorage.getItem("popupShown")) {
+            sessionStorage.setItem("popupShown", "true");
+        } else {
+            setIsVisible(false);
+        }
+    }, []);
 
     return (
         isVisible && (
