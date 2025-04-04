@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const PopupMenu = ({ imageSrc }) => {
     const [isVisible, setIsVisible] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
-        setIsVisible(true);
-    }, []);
+        if (location.pathname === "/" && !localStorage.getItem("firstVisit")) {
+            setIsVisible(true);
+            localStorage.setItem("firstVisit", "true");
+        }
+    }, [location]);
 
     const handleClose = () => {
         setIsVisible(false);
