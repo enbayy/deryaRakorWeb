@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
 
 const PopupMenu = ({ imageSrc }) => {
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
 
     const handleClose = () => {
         setIsVisible(false);
     };
-
-    useEffect(() => {
-        if (!localStorage.getItem("popupShown")) {
-            localStorage.setItem("popupShown", "true");
-        }
-    }, []);
 
     return (
         isVisible && (
