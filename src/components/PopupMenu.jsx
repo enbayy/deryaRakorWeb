@@ -1,7 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const PopupMenu = ({ imageSrc }) => {
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const hasSeenPopup = localStorage.getItem("hasSeenPopup");
+        if (!hasSeenPopup) {
+            setIsVisible(true);
+            localStorage.setItem("hasSeenPopup", "true");
+        }
+    }, []);
 
     const handleClose = () => {
         setIsVisible(false);
@@ -18,7 +26,7 @@ const PopupMenu = ({ imageSrc }) => {
                     />
                     <button
                         onClick={handleClose}
-                        className="absolute top-0 right-0 text-white bg-red-500 p-2  hover:bg-red-700 focus:outline-none"
+                        className="absolute top-0 right-0 text-white bg-red-500 p-2 hover:bg-red-700 focus:outline-none"
                     >
                         X
                     </button>
