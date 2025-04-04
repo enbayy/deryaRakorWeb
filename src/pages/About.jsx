@@ -50,7 +50,6 @@ const AboutPage = () => {
                 >
                     <source src={video} type="video/mp4" />
                 </video>
-
             </div>
 
             <div className="mt-8 text-center max-w-4xl">
