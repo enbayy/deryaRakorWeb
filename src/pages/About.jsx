@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import video from "../assets/DeryaRakor.mp4";
 import slider1 from "../assets/slider7.png";
 import slider2 from "../assets/slider8.png";
 import slider3 from "../assets/slider9.png";
@@ -28,6 +27,8 @@ const AboutPage = () => {
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, []);
+
+    const video = "/DeryaRakor.mp4";
 
     return (
         <div className="bg-white dark:bg-black container w-full min-h-screen flex flex-col items-center px-4 md:px-12 lg:px-20">
