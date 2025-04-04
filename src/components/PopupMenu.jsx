@@ -8,10 +8,8 @@ const PopupMenu = ({ imageSrc }) => {
     };
 
     useEffect(() => {
-        if (!sessionStorage.getItem("popupShown")) {
-            sessionStorage.setItem("popupShown", "true");
-        } else {
-            setIsVisible(false);
+        if (!localStorage.getItem("popupShown")) {
+            localStorage.setItem("popupShown", "true");
         }
     }, []);
 
@@ -26,7 +24,7 @@ const PopupMenu = ({ imageSrc }) => {
                     />
                     <button
                         onClick={handleClose}
-                        className="absolute top-0 right-0 text-white bg-red-500 p-2  hover:bg-red-700 focus:outline-none"
+                        className="absolute top-0 right-0 text-white bg-red-500 p-2 hover:bg-red-700 focus:outline-none"
                     >
                         X
                     </button>
