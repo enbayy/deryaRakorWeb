@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 const CookieBanner = () => {
     const { t } = useTranslation();
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+        if (cookiesAccepted === null) {
+            setIsVisible(true);
+        }
+    }, []);
 
     const handleAccept = () => {
         localStorage.setItem("cookiesAccepted", "true");
