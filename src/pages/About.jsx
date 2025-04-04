@@ -42,12 +42,15 @@ const AboutPage = () => {
                     </p>
                 )}
                 <video
-                    className={`w-auto h-auto rounded-lg object-contain ${videoLoaded ? "block" : "hidden"}`}
+                    className={`w-full h-auto rounded-lg object-contain ${videoLoaded ? "block" : "hidden"}`}
                     controls
+                    muted
+                    autoPlay
                     onLoadedData={() => setVideoLoaded(true)}
                 >
                     <source src={video} type="video/mp4" />
                 </video>
+
             </div>
 
             <div className="mt-8 text-center max-w-4xl">
