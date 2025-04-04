@@ -6,10 +6,8 @@ const CookieBanner = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        const cookiesAccepted = localStorage.getItem("cookiesAccepted");
-        if (cookiesAccepted === null) {
-            setIsVisible(true);
-        }
+        setIsVisible(true);
+        sessionStorage.setItem("cookieShown", "true");
     }, []);
 
     const handleAccept = () => {
